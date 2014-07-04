@@ -23,6 +23,17 @@ ActiveRecord::Schema.define(version: 20140704035236) do
     t.datetime "updated_at"
   end
 
+  create_table "trucks", force: true do |t|
+    t.string   "name",        null: false
+    t.string   "food_type"
+    t.text     "description"
+    t.integer  "business_id"
+    t.datetime "starts_at"
+    t.datetime "ends_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
