@@ -10,12 +10,14 @@ h2
     = f.text_field :last_name, placeholder: "Last"
   br
   div
-    = f.phone_field :phone, placeholder: "(555)555-5555"
-  br
-  div
     = f.label :email
     br
-    = f.email_field :email
+    = f.email_field :email, placeholder: "user@example.com"
+  div
+    = f.label :phone
+    br
+    = f.phone_field :phone, placeholder: "(555)555-5555"
+  br
   div
     = f.label :password
     br
