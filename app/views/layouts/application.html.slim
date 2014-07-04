@@ -18,4 +18,9 @@ body
   .container
     == yield
 
+  div id="footer"
+    | Copyright ©  
+    = Time.now.year
+    | - Team MobileNoms
+
   = javascript_include_tag "application"
