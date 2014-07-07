@@ -2,10 +2,22 @@ h2
   | Sign up
 = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
   = devise_error_messages!
+
+  div
+    = f.text_field :first_name, placeholder: "First", autofocus: true
+  br
+  div
+    = f.text_field :last_name, placeholder: "Last"
+  br
   div
     = f.label :email
     br
-    = f.email_field :email, autofocus: true
+    = f.email_field :email, placeholder: "user@example.com"
+  div
+    = f.label :phone
+    br
+    = f.phone_field :phone, placeholder: "(555)555-5555"
+  br
   div
     = f.label :password
     br
