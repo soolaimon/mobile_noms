@@ -1,31 +1,33 @@
-h2
-  | Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = devise_error_messages!
+div class="row"
+  div class="col-md-6 col-md-offset-3"
+    h2 Sign up
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = devise_error_messages!
 
-  div
-    = f.text_field :first_name, placeholder: "First", autofocus: true
-  br
-  div
-    = f.text_field :last_name, placeholder: "Last"
-  br
-  div
-    = f.label :email
-    br
-    = f.email_field :email, placeholder: "user@example.com"
-  div
-    = f.label :phone
-    br
-    = f.phone_field :phone, placeholder: "(555)555-5555"
-  br
-  div
-    = f.label :password
-    br
-    = f.password_field :password, autocomplete: "off"
-  div
-    = f.label :password_confirmation
-    br
-    = f.password_field :password_confirmation, autocomplete: "off"
-  div
-    = f.submit "Sign up"
-= render "devise/shared/links"
+      div class="form-group"
+        = f.label :first_name
+        br
+        = f.text_field :first_name, placeholder: "Enter your first name", autofocus: true, class: "form-control"
+      div class="form-group"
+        = f.label :last_name
+        br
+        = f.text_field :last_name, placeholder: "Enter your last name", class: "form-control"
+      div class="form-group"
+        = f.label :email
+        br
+        = f.email_field :email, placeholder: "Enter your email address", class: "form-control"
+      div class="form-group"
+        = f.label :phone
+        br
+        = f.phone_field :phone, placeholder: "Enter your phone number", class: "form-control"
+      div class="form-group"
+        = f.label :password
+        br
+        = f.password_field :password, autocomplete: "off", placeholder: "Enter your password", class: "form-control"
+      div class="form-group"
+        = f.label :password_confirmation
+        br
+        = f.password_field :password_confirmation, autocomplete: "off", placeholder: "Enter your password again to confirm", class: "form-control"
+      div class="form-group"
+        = f.submit "Sign up", class: "btn btn-primary"
+    = render "devise/shared/links"

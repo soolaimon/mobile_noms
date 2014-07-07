@@ -5,7 +5,7 @@ FactoryGirl.define do
     name { Faker::Company.name }
     food_type { Faker::BaconIpsum.word}
     description { Faker::BaconIpsum.paragraph }
-    business
+    user
   end
 end
 

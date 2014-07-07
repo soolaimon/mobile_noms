@@ -13,11 +13,13 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
-gem 'bootstrap-sass'
 gem 'slim-rails'
 gem 'geocoder'
 
 gem 'devise'
+
+gem 'rmagick', :require => 'RMagick'
+gem 'carrierwave'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -36,7 +38,7 @@ group :test do
   gem 'database_cleaner'
   gem 'timecop'
 end
- 
+
 group :development, :test do
   gem 'ffaker'
   gem 'rspec-rails'

@@ -1,4 +1,5 @@
 class Truck < ActiveRecord::Base
-  belongs_to :business
-  validates :business_id, :name, presence: true
+  belongs_to :user
+  validates :name, presence: true
+  mount_uploader :image, ImageUploader
 end

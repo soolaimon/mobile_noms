@@ -4,6 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
-  belongs_to :business
+  has_many :trucks
   validates :first_name, :last_name, presence: true
 end

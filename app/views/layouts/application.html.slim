@@ -6,8 +6,14 @@ html lang="en"
 
     title == content_for?(:title) ? yield(:title) : "Untitled"
 
+  = stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+  = stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/amelia/bootstrap.min.css"
+  = stylesheet_link_tag "http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
   = stylesheet_link_tag "application"
+
   = javascript_include_tag "vendor/modernizr"
+  = javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"
+
   = csrf_meta_tag
 
 body
@@ -19,5 +25,7 @@ body
 
   .container
     == yield
+
+  =render "layouts/footer"
 
   = javascript_include_tag "application"

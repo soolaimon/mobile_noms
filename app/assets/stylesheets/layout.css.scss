@@ -1,0 +1,29 @@
+// body {
+//   color: white;
+//   background-color: #FF0000;
+// }
+
+#footer {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 5px;
+}
+
+.pad-checkbox {
+  margin-left: 5px;
+}
+
+.horizontal-menu {
+  padding: 0;
+  list-style-type: none;
+  li {
+    display: inline;
+  }
+  li + li::before {
+    content: " | ";
+  }
+}
+
+.big-logo {
+  text-align: center;
+}
