@@ -1,0 +1,65 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/davidnelson/DPL/projects/mobile_noms/app/models/user.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/davidnelson/DPL/projects/mobile_noms/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/davidnelson/DPL/projects/mobile_noms/app/helpers/site_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/davidnelson/DPL/projects/mobile_noms/app/helpers/trucks_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/davidnelson/DPL/projects/mobile_noms/app/controllers/site_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/davidnelson/DPL/projects/mobile_noms/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/davidnelson/DPL/projects/mobile_noms/app/controllers/trucks_controller.rb": [
+        1,
+        null,
+        null
+      ],
+      "/Users/davidnelson/DPL/projects/mobile_noms/app/models/business.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/davidnelson/DPL/projects/mobile_noms/app/models/truck.rb": [
+        1,
+        1,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1404759111
+  }
+}
