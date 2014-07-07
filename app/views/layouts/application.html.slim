@@ -20,9 +20,6 @@ body
   .container
     == yield
 
-  div id="footer"
-    | Copyright ©  
-    = Time.now.year
-    | - Team MobileNoms
+  =render "layouts/footer"
 
   = javascript_include_tag "application"
