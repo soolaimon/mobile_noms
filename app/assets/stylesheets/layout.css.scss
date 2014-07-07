@@ -1,6 +1,6 @@
 body {
   color: white;
-  background-color: #313333;
+  background-color: #FF0000;
 }
 
 #footer {
@@ -22,4 +22,8 @@ body {
   li + li::before {
     content: " | ";
   }
+}
+
+.big-logo {
+  text-align: center;
 }
