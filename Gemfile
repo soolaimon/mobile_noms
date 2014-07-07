@@ -17,6 +17,7 @@ gem 'slim-rails'
 gem 'geocoder'
 
 gem 'devise'
+gem 'searchkick'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
