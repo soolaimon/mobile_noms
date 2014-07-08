@@ -1,4 +1,12 @@
 h1 MobileNoms
 p Welcome to MobileNoms. Find food trucks with full of noms by you.
+
+div class='form-group'
+  = form_tag trucks_path, :method => 'get' do
+  p 
+    = text_field_tag :search, params[:search], autofocus: true, class: 'form-control'
+    br
+    = submit_tag "Search", :name => nil, class: 'btn btn-primary'
+
 div class="big-logo"
   = image_tag "logo.png"
