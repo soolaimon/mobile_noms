@@ -35,9 +35,19 @@ class TrucksController < ApplicationController
   end
 
   def update
-    
+    @truck = Truck.find(params[:id])
+    if @truck.update_attributes(truck_params)
+      redirect_to trucks_path
+    else
+      render :edit
+    end
   end
 
+  def destroy
+    @truck = Truck.find(params[:id])
+    @truck.destroy
+    redirect_to trucks_path    
+  end
 
 
   private
