@@ -4,7 +4,8 @@
   ul.nav.navbar-nav.pull-right
     -if user_signed_in?
       li = link_to current_user.email, edit_user_registration_path
-      li = link_to "View Noms Trucks", trucks_path 
+      li = link_to "View Noms Trucks", trucks_path
+      li = link_to "Add Noms Truck", new_truck_path
       li = link_to "Logout", destroy_user_session_path, method: :delete
     -else
       li = link_to "Sign your truck up!", new_user_registration_path
