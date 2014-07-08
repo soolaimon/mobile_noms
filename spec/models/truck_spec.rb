@@ -5,7 +5,7 @@ RSpec.describe Truck, :type => :model do
     it { should belong_to :user }
   end
 
-  describe "validations", :focus do
+  describe "validations" do
     it { should validate_presence_of :name }
   end
 end

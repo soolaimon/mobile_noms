@@ -3,9 +3,8 @@
 FactoryGirl.define do
   factory :truck do
     name { Faker::Company.name }
-    food_type { Faker::BaconIpsum.word}
-    description { Faker::BaconIpsum.paragraph }
-    user
+    food_type { Faker::Lorem.word}
+    description { Faker::Lorem.paragraph }
   end
 end
 
