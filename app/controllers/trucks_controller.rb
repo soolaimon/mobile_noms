@@ -1,9 +1,10 @@
 class TrucksController < ApplicationController
   def index
     Truck.reindex
-    trucks = Truck.search "cup"
+    puts "++++++++++++++++++++++++++++++++"
+    trucks = Truck.search "Cupbop"
     trucks.each do |truck|
-      puts product.name
+      puts "================#{truck.name}"
     end
   end
 end
