@@ -7,4 +7,8 @@ class TrucksController < ApplicationController
       puts "================#{truck.name}"
     end
   end
+
+  def new
+    @truck = Truck.new
+  end
 end
