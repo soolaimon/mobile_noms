@@ -41,4 +41,14 @@ RSpec.describe TrucksController, :type => :controller do
       expect(response).to render_template('show')
     end
   end
+
+  describe "#new" do
+    it "should create a new instance of truck" do
+      get :new
+      expect(response).to be_success 
+      expect(assigns(:truck)).to be_new_record 
+      expect(response).to render_template('new') 
+    end
+  end
+
 end
