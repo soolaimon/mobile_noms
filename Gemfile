@@ -17,7 +17,10 @@ gem 'slim-rails'
 gem 'geocoder'
 
 gem 'devise'
-gem 'searchkick'
+gem 'searchkick', github: 'ankane/searchkick', branch: 'elasticsearch-1.2'
+
+gem 'rmagick', :require => 'RMagick'
+gem 'carrierwave'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
