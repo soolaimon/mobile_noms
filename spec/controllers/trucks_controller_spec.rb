@@ -27,7 +27,7 @@ RSpec.describe TrucksController, :type => :controller do
     end
   end
 
-  describe "#show", :focus do
+  describe "#show" do
     before do
       @user = create(:user)
       @user.confirm!
@@ -50,5 +50,45 @@ RSpec.describe TrucksController, :type => :controller do
       expect(response).to render_template('new') 
     end
   end
+
+  describe "#create" do
+
+    before do
+      @user = create(:user)
+      @user.confirm!
+      sign_in @user
+    end
+    
+    context "when saving a proper record" do
+      it "creates a new truck and saves it to DB" do
+        expect { 
+          post :create, truck: {user_id: @user.id, name: "Pizza"}
+        }.to change(Truck, :count).by(1)
+      end
+    end
+
+    context "when failing to save record" do
+      it "renders new template and doesn't save truck to db" do
+        post :create, truck: {name: nil}
+        expect(response).to render_template('new') 
+        expect(Truck.count).to eq 0 
+      end
+    end
+  end
+
+  describe "#edit" do
+    before do
+      @user = create(:user)
+      @truck = create(:truck, user_id: @user.id)
+    end
+
+    it "displays the edit page for the truck i want to edit", :focus do
+      get :edit, id: @truck.id
+      expect(response).to be_success
+      expect(assigns(:truck).id).to eq @truck.id
+      expect(response).to render_template('edit') 
+    end
+  end
+
 
 end

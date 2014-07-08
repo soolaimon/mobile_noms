@@ -1,6 +1,6 @@
 class TrucksController < ApplicationController
 
-  # before_action :authenticate_user!, only: [:index]
+  # before_action :authenticate_user!
 
   def index
     # Truck.reindex
@@ -9,8 +9,6 @@ class TrucksController < ApplicationController
     # trucks.each do |truck|
     #   puts "================#{truck.name}"
     # end
-
-
     @trucks = current_user.trucks
   end
 
@@ -31,6 +29,16 @@ class TrucksController < ApplicationController
       render :new
     end
   end
+
+  def edit
+    @truck = Truck.find(params[:id])
+  end
+
+  def update
+    
+  end
+
+
 
   private
 
