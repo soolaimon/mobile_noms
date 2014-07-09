@@ -24,8 +24,10 @@ class TrucksController < ApplicationController
     @truck = Truck.new(truck_params)
     @truck.user_id = current_user.id
     if @truck.save
+      flash[:notice] = "Truck saved succesfully"
       redirect_to trucks_path
     else
+      flash[:alert] = "Failed to save truck"
       render :new
     end
   end
@@ -37,8 +39,10 @@ class TrucksController < ApplicationController
   def update
     @truck = Truck.find(params[:id])
     if @truck.update_attributes(truck_params)
+      flash[:notice] = "Truck saved succesfully"
       redirect_to trucks_path
     else
+      flash[:alert] = "Failed to save truck"
       render :edit
     end
   end
