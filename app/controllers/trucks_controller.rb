@@ -1,6 +1,6 @@
 class TrucksController < ApplicationController
 
-  # before_action :authenticate_user!
+  before_action :ensure_user_is_logged_in 
 
   def index
     # Truck.reindex
@@ -54,5 +54,9 @@ class TrucksController < ApplicationController
 
   def truck_params
     params.require(:truck).permit(:name, :food_type, :user_id, :description, :starts_at, :ends_at)
+  end
+
+  def ensure_user_is_logged_in
+    redirect_to root_path unless current_user
   end
 end
