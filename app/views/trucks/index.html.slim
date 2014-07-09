@@ -2,6 +2,6 @@ h1 My Trucks Index Page
 
 - @trucks.each do |truck|
   = truck.name
-  = truck.food_type
-  = truck.starts_at
-  = truck.ends_at
+  = truck.id
+  = link_to('Truck Info', truck_path(truck.id))
+  br
