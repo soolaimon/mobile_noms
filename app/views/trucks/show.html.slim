@@ -1,6 +1,6 @@
 h1 Your Noms Trucks
 
-= @truck.image
+= image_tag(@truck.image.url(:logo))
 = @truck.name
 = @truck.food_type
 = @truck.starts_at

@@ -1,6 +1,6 @@
 class TrucksController < ApplicationController
 
-  before_action :ensure_user_is_logged_in 
+  before_action :ensure_user_is_logged_in
 
   def index
     # Truck.reindex
@@ -46,14 +46,14 @@ class TrucksController < ApplicationController
   def destroy
     @truck = Truck.find(params[:id])
     @truck.destroy
-    redirect_to trucks_path    
+    redirect_to trucks_path
   end
 
 
   private
 
   def truck_params
-    params.require(:truck).permit(:name, :food_type, :user_id, :description, :starts_at, :ends_at)
+    params.require(:truck).permit(:name, :food_type, :user_id, :description, :starts_at, :ends_at, :image)
   end
 
   def ensure_user_is_logged_in

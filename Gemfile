@@ -19,7 +19,7 @@ gem 'geocoder'
 gem 'devise'
 gem 'searchkick', github: 'ankane/searchkick', branch: 'elasticsearch-1.2'
 
-gem 'rmagick', :require => 'RMagick'
+gem 'mini_magick'
 gem 'carrierwave'
 
 # Use jquery as the JavaScript library

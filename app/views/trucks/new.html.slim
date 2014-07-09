@@ -18,6 +18,10 @@ div class="row"
         br
         = f.text_area :description, placeholder: "Description of your Noms truck", class: "form-control"
 
+      div class="form-group"
+        = f.label :image
+        br
+        = f.file_field :image
       / div class="form-group"
       /   = f.label :location
       /   br
