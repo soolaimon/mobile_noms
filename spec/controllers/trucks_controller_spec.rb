@@ -100,12 +100,12 @@ RSpec.describe TrucksController, :type => :controller do
         put :update, id: @truck.id, truck: {name: 'new'}
         expect(@truck.reload.name).to eq 'new'
         expect(response).to be_redirect
-        expect(response).to redirect_to trucks_path   # (@truck.id)
+        expect(response).to redirect_to trucks_path
       end
     end
   end
 
-    describe '#destroy', :focus do
+    describe '#destroy' do
       before do
           @user = create(:user)
           @truck = create(:truck, user_id: @user.id)
