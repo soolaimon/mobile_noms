@@ -1,8 +1,8 @@
 .navbar.navbar-default role="navigation"
   .navbar-header
 
-    = link_to(image_tag("mobnom_logosm_b4.png"), root_path, class: "navbar-brand")
-  
+    = link_to(image_tag("mobnom_logosm_b5.png"), root_path, class: "navbar-brand")
+
   ul.nav.navbar-nav.pull-right
     -if user_signed_in?
       li = link_to current_user.email, edit_user_registration_path
