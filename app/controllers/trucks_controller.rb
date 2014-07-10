@@ -1,6 +1,6 @@
 class TrucksController < ApplicationController
-
   before_action :ensure_user_is_logged_in
+  before_action :get_times, only: [:new, :edit]
 
   def index
     # Truck.reindex
@@ -62,5 +62,9 @@ class TrucksController < ApplicationController
 
   def ensure_user_is_logged_in
     redirect_to root_path unless current_user
+  end
+
+  def get_times
+    @times = TrucksHelper::times
   end
 end

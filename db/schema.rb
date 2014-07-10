@@ -11,28 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140709195656) do
+ActiveRecord::Schema.define(version: 20140710191152) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "trucks", force: true do |t|
-    t.string   "name",           null: false
+    t.string   "name",            null: false
     t.string   "food_type"
     t.text     "description"
     t.datetime "starts_at"
     t.datetime "ends_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id",        null: false
+    t.integer  "user_id",         null: false
     t.string   "image"
-    t.string   "monday_hours"
-    t.string   "tuesday_hours"
-    t.string   "wedesday_hours"
-    t.string   "thursday_hours"
-    t.string   "friday_hours"
-    t.string   "saturday_hours"
-    t.string   "sunday_hours"
+    t.string   "monday_open"
+    t.string   "tuesday_open"
+    t.string   "wednesday_open"
+    t.string   "thursday_open"
+    t.string   "friday_open"
+    t.string   "saturday_open"
+    t.string   "sunday_open"
+    t.string   "monday_close"
+    t.string   "tuesday_close"
+    t.string   "wednesday_close"
+    t.string   "thursday_close"
+    t.string   "friday_close"
+    t.string   "saturday_close"
+    t.string   "sunday_close"
   end
 
   create_table "users", force: true do |t|
