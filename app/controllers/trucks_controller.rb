@@ -1,6 +1,7 @@
 class TrucksController < ApplicationController
   before_action :ensure_user_is_logged_in
   before_action :get_times, only: [:new, :edit]
+  before_action :get_truck, only: [:show, :edit, :update, :destroy]
 
   def index
     # Truck.reindex
@@ -13,7 +14,6 @@ class TrucksController < ApplicationController
   end
 
   def show
-    @truck = Truck.find(params[:id])
   end
 
   def new
@@ -33,11 +33,9 @@ class TrucksController < ApplicationController
   end
 
   def edit
-    @truck = Truck.find(params[:id])
   end
 
   def update
-    @truck = Truck.find(params[:id])
     if @truck.update_attributes(truck_params)
       flash[:notice] = "Truck saved successfully"
       redirect_to trucks_path
@@ -62,6 +60,10 @@ class TrucksController < ApplicationController
 
   def ensure_user_is_logged_in
     redirect_to root_path unless current_user
+  end
+
+  def get_truck
+    @truck = Truck.find(params[:id])
   end
 
   def get_times
