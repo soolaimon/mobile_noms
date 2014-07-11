@@ -120,17 +120,17 @@
           = f.select(:sunday_close, @times)
 
 
-    div class="form-group"
-      div class="hours"
-        li class="hour1"
-          = f.label :image
-        li class="select1"
-          = f.file_field :image
+  div class="form-group"
+    div class="hours"
+      li class="hour1"
+        = f.label :image
+      li class="select1"
+        = f.file_field :image
 
     / div class="form-group"
     /   = f.label :location
     /   br
     /   = f.text_feild :location, autocomplete: "off", placeholder: "Enter your location", class: "form-control"
 
-    div class="form-group"
-        = f.submit "Submit Truck", class: "btn btn-primary"
+  div class="form-group"
+    = f.submit "Submit Truck", class: "btn btn-primary"
