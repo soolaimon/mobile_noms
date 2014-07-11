@@ -1,0 +1,74 @@
+= form_for @truck do |f|
+
+  div class="form-group"
+    = f.label :name
+    br
+    = f.text_field :name, placeholder: "Enter your business name", autofocus: true, class: "form-control"
+
+  div class="form-group"
+    = f.label :food_type
+    br
+    = f.text_area :food_type, placeholder: "Enter your food type", class: "form-control"
+
+  div class="form-group"
+    = f.label :description
+    br
+    = f.text_area :description, placeholder: "Description of your Noms truck", class: "form-control"
+  / .form-group 
+  /   = render "select_hours"
+  .form-group
+    = f.label :monday_open
+    = f.select :monday_open, @times, class: "chosen-select"
+    br
+    = f.label :monday_close
+    = f.select(:monday_close, @times)
+  .form-group
+    = f.label :tuesday_open
+    = f.select(:tuesday_open, @times)
+    br
+    = f.label :tuesday_close
+    = f.select(:tuesday_close, @times)
+  .form-group
+    = f.label :wednesday_open
+    = f.select(:wednesday_open, @times)
+    br
+    = f.label :wednesday_close
+    = f.select(:wednesday_close, @times)
+  .form-group
+    = f.label :thursday_open
+    = f.select(:thursday_open, @times)
+    br
+    = f.label :thursday_close
+    = f.select(:thursday_close, @times)
+  .form-group
+    = f.label :friday_open
+    = f.select(:friday_open, @times)
+    br
+    = f.label :friday_close
+    = f.select(:friday_close, @times)
+  .form-group
+    = f.label :saturday_open
+    = f.select(:saturday_open, @times)
+    br
+    = f.label :saturday_close
+    = f.select(:saturday_close, @times)
+  .form-group
+    = f.label :sunday_open
+    = f.select(:sunday_open, @times)
+    br
+    = f.label :sunday_close
+    = f.select(:sunday_close, @times)
+
+
+  div class="form-group"
+    = f.label :image
+    br
+    = f.file_field :image
+
+  / div class="form-group"
+  /   = f.label :location
+  /   br
+  /   = f.text_feild :location, autocomplete: "off", placeholder: "Enter your location", class: "form-control"
+
+  div class="form-group"
+    = f.submit "Submit Truck", class: "btn btn-primary"

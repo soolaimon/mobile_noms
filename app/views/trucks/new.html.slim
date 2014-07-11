@@ -1,41 +1,5 @@
 div class="row"
   div class="col-md-6 col-md-offset-3"
     h2 Add a Noms Truck
-    = form_for @truck, url: {action: "create"} do |f|
 
-      div class="form-group"
-        = f.label :name
-        br
-        = f.text_field :name, placeholder: "Enter your business name", autofocus: true, class: "form-control"
-
-      div class="form-group"
-        = f.label :food_type
-        br
-        = f.text_area :food_type, placeholder: "Enter your food type", class: "form-control"
-
-      div class="form-group"
-        = f.label :description
-        br
-        = f.text_area :description, placeholder: "Description of your Noms truck", class: "form-control"
-
-      div class="form-group"
-        = f.label :image
-        br
-        = f.file_field :image
-      / div class="form-group"
-      /   = f.label :location
-      /   br
-      /   = f.text_feild :location, autocomplete: "off", placeholder: "Enter your location", class: "form-control"
-
-      div class="form-group"
-        = f.label :starts_at
-        br
-        = f.datetime_select :starts_at, placeholder: "Enter your start time", class: "form-control"
-
-      div class="form-group"
-        = f.label :ends_at
-        br
-        = f.datetime_select :ends_at, placeholder: "Enter your end time", class: "form-control"
-
-      div class="form-group"
-        = f.submit "Submit Truck", class: "btn btn-primary"
+  = render "truck_form"

@@ -43,6 +43,11 @@ RSpec.describe TrucksController, :type => :controller do
   end
 
   describe "#new" do
+    before do
+      @user = create(:user)
+      @user.confirm!
+      sign_in @user
+    end
     it "should create a new instance of truck" do
       get :new
       expect(response).to be_success
@@ -79,6 +84,8 @@ RSpec.describe TrucksController, :type => :controller do
   describe "#edit" do
     before do
       @user = create(:user)
+      @user.confirm!
+      sign_in @user
       @truck = create(:truck, user_id: @user.id)
     end
 
@@ -93,6 +100,8 @@ RSpec.describe TrucksController, :type => :controller do
   describe "#update" do
     before do
       @user = create(:user)
+      @user.confirm!
+      sign_in @user
       @truck = create(:truck, name: "old", user_id: @user.id)
     end
     context "when saving truck to db successfully" do
@@ -108,6 +117,8 @@ RSpec.describe TrucksController, :type => :controller do
     describe '#destroy' do
       before do
           @user = create(:user)
+          sign_in @user
+          @user.confirm!
           @truck = create(:truck, user_id: @user.id)
       end
       it 'removes the truck from the database' do
