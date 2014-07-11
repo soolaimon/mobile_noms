@@ -4,8 +4,10 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 
+# application gems
 gem 'carrierwave'
 gem 'coffee-rails', '~> 4.0.0'
+gem 'chosen-rails'
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
@@ -17,8 +19,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'searchkick', github: 'ankane/searchkick', branch: 'elasticsearch-1.2'
 gem 'slim-rails'
 gem 'turbolinks'
-
-
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
 

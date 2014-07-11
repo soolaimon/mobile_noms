@@ -18,7 +18,7 @@
   /   = render "select_hours"
   .form-group
     = f.label :monday_open
-    = f.select(:monday_open, @times)
+    = f.select :monday_open, @times, class: "chosen-select"
     br
     = f.label :monday_close
     = f.select(:monday_close, @times)
