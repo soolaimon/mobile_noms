@@ -3,8 +3,7 @@
  // You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready(function() {
-  $('.form-group select').chosen(
-  {
+  $('.form-group select').chosen({
     allow_single_deselect: true,
     no_results_text: 'No results matched',
   });
