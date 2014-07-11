@@ -14,7 +14,30 @@
     = f.label :description
     br
     = f.text_area :description, placeholder: "Description of your Noms truck", class: "form-control"
-  / .form-group 
+
+  div class="form-group"
+    h3 Payment Types
+    = f.label :cash
+    br
+    =f.check_box :cash
+    br
+    = f.label :visa
+    br
+    = f.check_box :visa
+    br
+    = f.label :mastercard
+    br
+    = f.check_box :mastercard
+    br
+    = f.label :discover
+    br
+    = f.check_box :discover
+    br
+    = f.label :american_express
+    br
+    = f.check_box :american_express
+
+  / .form-group
   /   = render "select_hours"
   .form-group
     = f.label :monday_open
