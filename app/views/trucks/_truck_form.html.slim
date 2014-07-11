@@ -16,67 +16,82 @@
     = f.text_area :description, placeholder: "Description of your Noms truck", class: "form-control"
   / .form-group
   /   = render "select_hours"
+
   .form-group
     div class="hours"
       li class="hour1"
         = f.label :monday_open
+      li class="select1"
         = f.select(:monday_open, @times, class: "chosen-select")
       li class="hour2"
         = f.label :monday_close
+      li class="select2"
         = f.select(:monday_close, @times)
 
   .form-group
     div class="hours"
       li class="hour1"
         = f.label :tuesday_open
+      li class="select1"
         = f.select(:tuesday_open, @times)
       li class="hour2"
         = f.label :tuesday_close
+      li class="select2"
         = f.select(:tuesday_close, @times)
 
   .form-group
     div class="hours"
       li class="hour1"
         = f.label :wednesday_open
+      li class="select1"
         = f.select(:wednesday_open, @times)
       li class="hour2"
         = f.label :wednesday_close
+      li class="select2"
         = f.select(:wednesday_close, @times)
 
   .form-group
     div class="hours"
       li class="hour1"
         = f.label :thursday_open
+      li class="select1"
         = f.select(:thursday_open, @times)
       li class="hour2"
         = f.label :thursday_close
+      li class="select2"
         = f.select(:thursday_close, @times)
 
   .form-group
     div class="hours"
       li class="hour1"
         = f.label :friday_open
+      li class="select1"
         = f.select(:friday_open, @times)
       li class="hour2"
         = f.label :friday_close
+      li class="select2"
         = f.select(:friday_close, @times)
 
   .form-group
     div class="hours"
       li class="hour1"
         = f.label :saturday_open
+      li class="select1"
         = f.select(:saturday_open, @times)
       li class="hour2"
         = f.label :saturday_close
+      li class="select2"
         = f.select(:saturday_close, @times)
 
   .form-group
     div class="hours"
       li class="hour1"
         = f.label :sunday_open
+      li class="select1"
         = f.select(:sunday_open, @times)
       li class="hour2"
         = f.label :sunday_close
+      li class="select2"
         = f.select(:sunday_close, @times)
 
 
@@ -84,7 +99,7 @@
     div class="hours"
       li class="hour1"
         = f.label :image
-      li class="hour2"
+      li class="select1"
         = f.file_field :image
 
   / div class="form-group"
@@ -93,5 +108,4 @@
   /   = f.text_feild :location, autocomplete: "off", placeholder: "Enter your location", class: "form-control"
 
   div class="form-group"
-    li class="hour1"
       = f.submit "Submit Truck", class: "btn btn-primary"

@@ -18,17 +18,24 @@
   margin: -12px;
 }
 
-.hours li {
-  display: inline;
+.hour1 {
+  color: #17AD21;
 }
 
-.hour1 {
-  color: #F2521D;
+.select1 {
+  position: absolute;
+  left: 240px;
+}
+
+.select2 {
+  position: absolute;
+  left: 570px;
 }
 
 .hour2 {
-  color: #17AD21;
-  margin: 50px;
+  color: #F2521D;
+  position: absolute;
+  left: 400px;
 }
 
 .hours li {
