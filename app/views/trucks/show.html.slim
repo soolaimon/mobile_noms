@@ -1,8 +1,10 @@
 h1 Your Noms Trucks
-
-= image_tag(@truck.image.url(:logo))
-= @truck.name
-= @truck.food_type
-= @truck.starts_at
-= @truck.ends_at
-= @truck.user_id
+div class="jumbotron"
+  = image_tag(@truck.image.url(:logo))
+  div class="page-header"
+    = @truck.name
+  div class="food-type"
+    = @truck.food_type
+  = @truck.starts_at
+  = @truck.ends_at
+  = @truck.user_id
