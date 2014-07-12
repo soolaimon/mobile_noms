@@ -1,10 +1,50 @@
 h1 Your Noms Trucks
 div class="jumbotron"
   = image_tag(@truck.image.url(:logo))
+
+
   div class="page-header"
     = @truck.name
+
   div class="food-type"
     = @truck.food_type
-  = @truck.starts_at
-  = @truck.ends_at
-  = @truck.user_id
+
+  div class="food-description"
+    = @truck.description
+
+  div class="monday"
+    = @truck.monday_open
+    = @truck.monday_close
+
+  div class="tuesday"
+    = @truck.tuesday_open
+    = @truck.tuesday_close
+
+  div class="wednesday"
+    = @truck.wednesday_open
+    = @truck.wednesday_close
+
+  div class="thursday"
+    = @truck.thursday_open
+    = @truck.thursday_close
+
+  div class="friday"
+    = @truck.friday_open
+    = @truck.friday_close
+
+  div class="saturday"
+    = @truck.saturday_open
+    = @truck.saturday_close
+
+  div class="sunday"
+    = @truck.sunday_open
+    = @truck.sunday_close
+
+  div class="cash"
+    = @truck.cash
+
+  div class="visa"
+    = @truck.visa
+
+  div class="user_id"
+    = @truck.user_id
