@@ -15,3 +15,4 @@
 //= require chosen-jquery
 //= require gmaps
 //= require trucks.js
+//= require alertify.js

@@ -6,4 +6,6 @@ h1 My Trucks Index Page
   = link_to('Truck Info', truck_path(truck.id))
   | |
   = link_to( "Edit Truck Info", edit_truck_path(truck.id))
+  | |
+  = link_to( "Update Truck Location", edit_truck_location_path(truck.id, truck.location.id))
   br
