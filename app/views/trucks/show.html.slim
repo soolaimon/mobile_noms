@@ -1,7 +1,9 @@
-h1 Your Noms Trucks
-div class="jumbotron"
-  = image_tag(@truck.image.url(:logo))
+h1 = @truck.name.titleize
 
+div class="jumbotron"
+  #truck-map data-truck="#{@truck.id}" data-location="#{@truck.location.id}"
+
+  = image_tag(@truck.image.url(:logo))
 
   div class="page-header"
     = @truck.name

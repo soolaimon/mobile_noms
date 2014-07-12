@@ -1,7 +1,7 @@
 class TrucksController < ApplicationController
-  before_action :ensure_user_is_logged_in
-  before_action :get_times, only: [:new, :edit]
+  before_action :ensure_user_is_logged_in, only: [:index, :new, :create, :edit, :update, :destroy]
   before_action :get_truck, only: [:show, :edit, :update, :destroy]
+  before_action :get_times, only: [:new, :edit]
 
   def index
     # Truck.reindex
@@ -50,7 +50,6 @@ class TrucksController < ApplicationController
     @truck.destroy
     redirect_to trucks_path
   end
-
 
   private
 
