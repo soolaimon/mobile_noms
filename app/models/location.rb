@@ -6,7 +6,7 @@ class Location < ActiveRecord::Base
   after_validation :geocode
 
   def address
-    "#{street_address} #{street_address2}, #{city}, #{state} #{zip}"
+    "#{street_address} #{street_address2} #{city}, #{state} #{zip}".titleize
   end
 
 end

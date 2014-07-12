@@ -14,8 +14,8 @@ RSpec.describe Location, :type => :model do
       @location = create(:location, street_address: "813 melrose terrace",
        street_address2: "apt 23", city: "Newport News", state: "Virginia", zip: "23608")
     end
-    it "should return 813 melrose terrace apt 23, Newport News, Virginia 23608" do
-      expect(@location.address).to eq "813 melrose terrace apt 23, Newport News, Virginia 23608" 
+    it "should return 813 melrose terrace apt 23 Newport News, Virginia 23608" do
+      expect(@location.address).to eq "813 Melrose Terrace Apt 23 Newport News, Virginia 23608" 
     end
   end
 end
