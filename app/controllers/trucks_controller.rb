@@ -11,6 +11,7 @@ class TrucksController < ApplicationController
     #   puts "================#{truck.name}"
     # end
     @trucks = current_user.trucks
+    
   end
 
   def show

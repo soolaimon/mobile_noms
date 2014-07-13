@@ -7,5 +7,8 @@ h1 My Trucks Index Page
   | |
   = link_to( "Edit Truck Info", edit_truck_path(truck.id))
   | |
-  = link_to( "Update Truck Location", edit_truck_location_path(truck.id, truck.location.id))
+  a
+    span
+      i.fa.fa-crosshairs
+  / = link_to( "Update Truck Location", edit_truck_location_path(truck.id, truck.location))
   br
