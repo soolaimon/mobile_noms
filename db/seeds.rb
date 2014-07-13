@@ -6,26 +6,67 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-trucks = Truck.create([{
+user = User.first
+
+t1 = Truck.new(
   name:            'Super Taco',
   food_type:       'Happy Mexican Food',
   description:     'Best Mexican food to make people high',
-  starts_at:       '2014-07-09 10:00:00',
-  ends_at:         '2014-07-09 2:30:00',
-  created_at:      '2014-07-09 03:44:14',
-  updated_at:      '2014-07-09 03:44:14',
-  user_id:         2,
-  image:           nil
-  }])
+  user_id:         user.id,
+  image:           nil,
+  monday_open: "7:00 am",
+  monday_close: "7:00 pm",
+  tuesday_open: "7:00 am",
+  tuesday_close: "7:00 pm",
+  wednesday_open: "7:00 am",
+  wednesday_close: "7:00 pm",
+  thursday_open: "7:00 am",
+  thursday_close: "7:00 pm",
+  friday_open: "7:00 am",
+  friday_close: "7:00 pm",
+  saturday_open: "7:00 am",
+  saturday_close: "7:00 pm",
+  sunday_open: "7:00 am",
+  sunday_close: "7:00 pm"
 
-trucks = Truck.create([{
+  )
+t1.save
+
+t2 = Truck.new(
   name:            'Space Sushi',
   food_type:       'Tokyo style new generation sushi',
   description:     'We only have sushi. No other Japanese foods.',
-  starts_at:       '2014-07-11 10:00:00',
-  ends_at:         '2014-07-11 2:30:00',
-  created_at:      '2014-07-09 02:55:12',
-  updated_at:      '2014-07-09 03:10:07',
-  user_id:         1,
-  image:           nil
-  }])
+  user_id:         user.id,
+  image:           nil,
+  monday_open: "7:00 am",
+  monday_close: "7:00 pm",
+  tuesday_open: "7:00 am",
+  tuesday_close: "7:00 pm",
+  wednesday_open: "7:00 am",
+  wednesday_close: "7:00 pm",
+  thursday_open: "7:00 am",
+  thursday_close: "7:00 pm",
+  friday_open: "7:00 am",
+  friday_close: "7:00 pm",
+  saturday_open: "7:00 am",
+  saturday_close: "7:00 pm",
+  sunday_open: "7:00 am",
+  sunday_close: "7:00 pm"
+  )
+
+t2.save
+
+loc1 = Location.new({
+  street_address: "813 Melrose Terrace", city: "Newport News", state: "VA", zip: "23608", truck_id: t1.id
+  })
+
+loc1.save
+
+loc2 = Location.new({
+  street_address: "184 N 50 E", city: "Orem", state: "UT", zip: "84057", truck_id: t1.id
+  })
+
+loc2.save
+
+
+
