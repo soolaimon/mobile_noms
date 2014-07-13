@@ -63,7 +63,7 @@ loc1 = Location.new({
 loc1.save
 
 loc2 = Location.new({
-  street_address: "184 N 50 E", city: "Orem", state: "UT", zip: "84057", truck_id: t1.id
+  street_address: "184 N 50 E", city: "Orem", state: "UT", zip: "84057", truck_id: t2.id
   })
 
 loc2.save
