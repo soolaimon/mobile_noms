@@ -1,10 +1,37 @@
 h1 My Trucks Index Page
 
+
 - @trucks.each do |truck|
   = truck.name
   = truck.id
   = link_to('Truck Info', truck_path(truck.id))
   | |
   = link_to( "Edit Truck Info", edit_truck_path(truck.id))
+
   = link_to( "Edit Truck Info", trucks_path )
+
+  | |
+  = link_to( "Delete This Truck", truck_path(truck.id), method: :delete, data: { confirm: 'Are you sure?'})
+  | |
+  / Geocodes location
+  a.geolocate href="#" data-truck="#{truck.id}" data-location="#{truck.location.id}"
+    span
+      i.fa.fa-crosshairs
+  | |
+  / need a link to edit_truck_location path for manual update
+
   br
+div class="jumbotron"
+  - @trucks.each do |truck|
+    div class="row"
+      div class="col-md-2"
+        = truck.name
+      div class="col-md-1"
+        = truck.id
+      div class="col-md-9"
+        = link_to('Truck Info', truck_path(truck.id))
+        | &nbsp;|&nbsp;
+        = link_to( "Edit Truck Info", edit_truck_path(truck.id))
+        | &nbsp;|&nbsp;
+        = link_to( "Delete This Truck", truck_path(truck.id), method: :delete, data: { confirm: 'Are you sure?'})
+        br

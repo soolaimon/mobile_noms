@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.2'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -12,18 +13,19 @@ gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'geocoder'
+gem 'font-awesome-sass'
 gem 'mini_magick'
-gem 'geocoder'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
+gem 'thin'
 gem 'uglifier', '>= 1.3.0'
 gem 'searchkick', github: 'ankane/searchkick', branch: 'elasticsearch-1.2'
 gem 'slim-rails'
-gem 'turbolinks'
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 group :development do
+  gem 'rails_12factor'
   gem 'spring'
 end
 group :test do

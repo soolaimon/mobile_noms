@@ -136,9 +136,12 @@
     div class="col-md-3"
       = f.file_field :image
 
-    / div class="form-group"
-    /   = f.label :location
-    /   br
+  div class="row"
+    div class="col-md-3"
+      div class="hour1"
+        = f.label :location
+    br
+    div class="col-md-3"
     /   = f.text_feild :location, autocomplete: "off", placeholder: "Enter your location", class: "form-control"
 
   div class="form-group"

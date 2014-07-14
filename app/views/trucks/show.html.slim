@@ -1,70 +1,86 @@
 h1 = @truck.name.titleize
 
 div class="jumbotron"
-  #truck-map data-truck="#{@truck.id}" data-location="#{@truck.location.id}"
+  div class="col-md-2"
+    = image_tag(@truck.image.url(:logo))
 
-  = image_tag(@truck.image.url(:logo))
+  div class="col-md-4 col-md-offset-6"
+    div class="page-header"
+      = @truck.name
 
-  div class="page-header"
-    = @truck.name
+    div class="food-type"
+      = @truck.food_type
 
-  div class="food-type"
-    = @truck.food_type
+    div class="food-description"
+      = @truck.description
 
-  div class="food-description"
-    = @truck.description
+    div class="monday"
+      |Monday: &nbsp;
+      = @truck.monday_open
+      |&nbsp; - &nbsp;
+      = @truck.monday_close
 
-  div class="monday"
-    = @truck.monday_open
-    = @truck.monday_close
+    div class="tuesday"
+      |Tuesday: &nbsp;
+      = @truck.tuesday_open
+      |&nbsp; - &nbsp;
+      = @truck.tuesday_close
 
-  div class="tuesday"
-    = @truck.tuesday_open
-    = @truck.tuesday_close
+    div class="wednesday"
+      |Wednesday: &nbsp;
+      = @truck.wednesday_open
+      |&nbsp; - &nbsp;
+      = @truck.wednesday_close
 
-  div class="wednesday"
-    = @truck.wednesday_open
-    = @truck.wednesday_close
+    div class="thursday"
+      |Thursday: &nbsp;
+      = @truck.thursday_open
+      |&nbsp; - &nbsp;
+      = @truck.thursday_close
 
-  div class="thursday"
-    = @truck.thursday_open
-    = @truck.thursday_close
+    div class="friday"
+      |Friday: &nbsp;
+      = @truck.friday_open
+      |&nbsp; - &nbsp;
+      = @truck.friday_close
 
-  div class="friday"
-    = @truck.friday_open
-    = @truck.friday_close
+    div class="saturday"
+      |Saturday: &nbsp;
+      = @truck.saturday_open
+      |&nbsp; - &nbsp;
+      = @truck.saturday_close
 
-  div class="saturday"
-    = @truck.saturday_open
-    = @truck.saturday_close
+    div class="sunday"
+      |Sunday: &nbsp;
+      = @truck.sunday_open
+      |&nbsp; - &nbsp;
+      = @truck.sunday_close
+      br
+      |Accepting:
+    div class="cash"
+      |cash: &nbsp;&nbsp;
+      = @truck.cash
 
-  div class="sunday"
-    = @truck.sunday_open
-    = @truck.sunday_close
-    br
-    |Accepting:
-  div class="cash"
-    |cash: &nbsp;&nbsp;
-    = @truck.cash
+    div class="visa"
+      |Visa: &nbsp;&nbsp;
+      = @truck.visa
 
-  div class="visa"
-    |Visa: &nbsp;&nbsp;
-    = @truck.visa
+    div class="mastercard"
+      |Mastercard: &nbsp;&nbsp;
+      = @truck.mastercard
 
-  div class="mastercard"
-    |Mastercard: &nbsp;&nbsp;
-    = @truck.mastercard
+    div class="discover"
+      |Discover: &nbsp;&nbsp;
+      = @truck.discover
 
-  div class="discover"
-    |Discover: &nbsp;&nbsp;
-    = @truck.discover
-
-  div class="american_express"
-    |American Express: &nbsp;&nbsp;
-    = @truck.american_express
+    div class="american_express"
+      |American Express: &nbsp;&nbsp;
+      = @truck.american_express
 
 
-  div class="user_id"
-    = @truck.user_id
+    div class="user_id"
+      = @truck.user_id
 
   = render 'twitter_timeline'
+
+  #truck-map data-truck="#{@truck.id}" data-location="#{@truck.location.id}"
