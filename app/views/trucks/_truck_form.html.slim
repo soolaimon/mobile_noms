@@ -110,14 +110,11 @@
     div class="col-md-3"
       = f.select(:sunday_close, @times)
 
-
-
-  div class="form-group"
-    div class="hours"
-      li class="hour1"
-        = f.label :image
-      li class="select1"
-        = f.file_field :image
+  div class="row"
+    div class="col-md-3"
+      = f.label :image
+    div class="col-md-3"
+      = f.file_field :image
 
     / div class="form-group"
     /   = f.label :location
