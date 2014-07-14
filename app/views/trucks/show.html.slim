@@ -41,12 +41,28 @@ div class="jumbotron"
   div class="sunday"
     = @truck.sunday_open
     = @truck.sunday_close
-
+    br
+    |Accepting:
   div class="cash"
+    |cash: &nbsp;&nbsp;
     = @truck.cash
 
   div class="visa"
+    |Visa: &nbsp;&nbsp;
     = @truck.visa
+
+  div class="mastercard"
+    |Mastercard: &nbsp;&nbsp;
+    = @truck.mastercard
+
+  div class="discover"
+    |Discover: &nbsp;&nbsp;
+    = @truck.discover
+
+  div class="american_express"
+    |American Express: &nbsp;&nbsp;
+    = @truck.american_express
+
 
   div class="user_id"
     = @truck.user_id
