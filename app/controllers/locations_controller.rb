@@ -1,7 +1,7 @@
 class LocationsController < ApplicationController
 
   def show
-    @location = Truck.find(params[:truck_id]).location
+    @location = Location.find(params[:id])
   end
 
 end
