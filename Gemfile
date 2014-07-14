@@ -17,6 +17,7 @@ gem 'font-awesome-sass'
 gem 'mini_magick'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
+gem 'thin'
 gem 'uglifier', '>= 1.3.0'
 gem 'searchkick', github: 'ankane/searchkick', branch: 'elasticsearch-1.2'
 gem 'slim-rails'
@@ -34,6 +35,7 @@ group :test do
 end
 
 group :development, :test do
+  gem 'better_errors'
   gem 'binding_of_caller'
   gem 'faker'
   gem 'factory_girl_rails'

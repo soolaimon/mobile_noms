@@ -7,8 +7,10 @@ h1 My Trucks Index Page
   | |
   = link_to( "Edit Truck Info", edit_truck_path(truck.id))
   | |
-  a
+  / Geocodes location
+  a.geolocate href="#" data-truck="#{truck.id}" data-location="#{truck.location.id}"
     span
       i.fa.fa-crosshairs
-  / = link_to( "Update Truck Location", edit_truck_location_path(truck.id, truck.location))
+  | |
+  / need a link to edit_truck_location path for manual update
   br

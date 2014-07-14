@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require chosen-jquery
-//= require gmaps
-//= require trucks.js
 //= require alertify.js
+//= require gmaps
+//= require chosen-jquery
+//= require trucks.js

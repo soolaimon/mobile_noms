@@ -7,10 +7,20 @@ $(document).ready(function() {
 
   loadMap();
 
-  $('.form-group select').chosen({
+  $('.chosen-select').chosen({
     allow_single_deselect: true,
     no_results_text: 'No results matched',
   });
+
+  $(document).on('click', '.geolocate', function() {
+    alertify.confirm("The browser is going to ask for your location, ok?", function (e) {
+      if (e) {
+        updateLocation();
+      }
+    });
+    return false;
+  });
+
 
 
 });
@@ -39,4 +49,41 @@ var loadMap = function () {
 
     });
   }
+};
+
+var updateLocation = function () {
+  GMaps.geolocate({
+    success: function (position) {
+      var latitude = position.coords.latitude;
+      var longitude = position.coords.longitude;
+      // console.log(longitude);
+      var url = '/trucks/' + $('.geolocate').data('truck') + '/locations/' + $('.geolocate').data('location');
+      $.ajax({
+        url: url,
+        type: "put",
+        data: { location: {latitude: latitude, longitude: longitude} },
+        dataType: "json",
+        success: function(data) {
+          console.log('success');
+          console.log(data);
+        },
+        error: function(a,b,c) {
+          console.log('fail');
+          console.log(a);
+          console.log(b);
+        }
+      });
+      // i$.post('/trucks/' + $('.geolocate').data('truck') + '/locations/' + $('.geolocate').data('location'),
+      // {longitude: longitude, latitude: latitude},
+      //  function() {
+      //   alertify.success("Location updated successfully!");
+      // });
+    },
+    error: function(error){
+      alertify.error("Update failed. Try again.");
+    },
+    not_supported: function() {
+      alertify.alert("Your browser doesn't support geolocation. You'll need to update manually.");
+  }
+  });
 };
