@@ -11,6 +11,7 @@ gem 'chosen-rails'
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
+gem 'geocoder'
 gem 'mini_magick'
 gem 'geocoder'
 gem 'pg'
@@ -32,7 +33,6 @@ group :test do
 end
 
 group :development, :test do
-  gem 'better_errors'
   gem 'binding_of_caller'
   gem 'faker'
   gem 'factory_girl_rails'

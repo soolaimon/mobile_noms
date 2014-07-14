@@ -1,5 +1,6 @@
 class TrucksController < ApplicationController
-  before_action :ensure_user_is_logged_in
+  before_action :ensure_user_is_logged_in, only: [:index, :new, :create, :edit, :update, :destroy]
+  before_action :get_truck, only: [:show, :edit, :update, :destroy]
   before_action :get_times, only: [:new, :edit]
 
   def index
@@ -13,7 +14,6 @@ class TrucksController < ApplicationController
   end
 
   def show
-    @truck = Truck.find(params[:id])
   end
 
   def new
@@ -33,11 +33,9 @@ class TrucksController < ApplicationController
   end
 
   def edit
-    @truck = Truck.find(params[:id])
   end
 
   def update
-    @truck = Truck.find(params[:id])
     if @truck.update_attributes(truck_params)
       flash[:notice] = "Truck saved successfully"
       redirect_to trucks_path
@@ -53,15 +51,18 @@ class TrucksController < ApplicationController
     redirect_to trucks_path
   end
 
-
   private
 
   def truck_params
-    params.require(:truck).permit(:name, :food_type, :user_id, :description, :starts_at, :ends_at, :image)
+    params.require(:truck).permit(:name, :food_type, :user_id, :description, :monday_open, :monday_close, :tuesday_open, :tuesday_close, :wednesday_open, :wednesday_close, :thursday_open, :thursday_close, :friday_open, :friday_close, :saturday_open, :saturday_close, :sunday_open, :sunday_close, :cash, :visa,  :image)
   end
 
   def ensure_user_is_logged_in
     redirect_to root_path unless current_user
+  end
+
+  def get_truck
+    @truck = Truck.find(params[:id])
   end
 
   def get_times
