@@ -1,5 +1,6 @@
 h1 My Trucks Index Page
 
+<<<<<<< HEAD
 - @trucks.each do |truck|
   = truck.name
   = truck.id
@@ -9,3 +10,19 @@ h1 My Trucks Index Page
   | |
   = link_to( "Delete This Truck", truck_path(truck.id), method: :delete, data: { confirm: 'Are you sure?'})
   br
+=======
+div class="jumbotron"
+  - @trucks.each do |truck|
+    div class="row"
+      div class="col-md-2"
+        = truck.name
+      div class="col-md-1"
+        = truck.id
+      div class="col-md-9"
+        = link_to('Truck Info', truck_path(truck.id))
+        | &nbsp;|&nbsp;
+        = link_to( "Edit Truck Info", edit_truck_path(truck.id))
+        | &nbsp;|&nbsp;
+        = link_to( "Delete This Truck", truck_path(truck.id), method: :delete, data: { confirm: 'Are you sure?'})
+        br
+>>>>>>> style
