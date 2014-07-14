@@ -13,7 +13,7 @@ $(document).ready(function() {
   });
 
   $(document).on('click', '.geolocate', function() {
-    alertify.confirm("The browser is going to ask for your location, ok?", function (e) {
+    alertify.confirm("The browser is going to get your location, ok?", function (e) {
       if (e) {
         updateLocation();
       }
