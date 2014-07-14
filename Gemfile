@@ -20,7 +20,6 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'searchkick', github: 'ankane/searchkick', branch: 'elasticsearch-1.2'
 gem 'slim-rails'
-gem 'turbolinks'
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
