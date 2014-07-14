@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140712172950) do
+ActiveRecord::Schema.define(version: 20140714202735) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20140712172950) do
     t.boolean  "discover",         default: false
     t.boolean  "american_express", default: false
     t.boolean  "cash",             default: false
+    t.string   "twitter_handle"
   end
 
   create_table "users", force: true do |t|

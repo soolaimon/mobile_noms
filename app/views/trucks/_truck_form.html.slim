@@ -16,6 +16,11 @@
     = f.text_area :description, placeholder: "Description of your Noms truck", class: "form-control"
 
   div class="form-group"
+    =f.label :twitter_handle
+    br
+    =f.text_field :twitter_handle, placeholder: "Enter twitter handle without the @ symbol", class: "form-control"
+
+  div class="form-group"
     h3 Payment Types
     = f.label :cash
     br
@@ -130,14 +135,6 @@
         = f.label :image
     div class="col-md-3"
       = f.file_field :image
-
-  div class="row"
-    div class="col-md-3"
-      div class="hour1"
-        = f.label :location
-    br
-    div class="col-md-3"
-    /   = f.text_feild :location, autocomplete: "off", placeholder: "Enter your location", class: "form-control"
 
   div class="form-group"
     = f.submit "Submit Truck", class: "btn btn-primary"

@@ -1,10 +1,10 @@
 h1 = @truck.name.titleize
 
 div class="jumbotron"
-  div class="col-md-2"
+  div class="col-md-4"
     = image_tag(@truck.image.url(:logo))
 
-  div class="col-md-4 col-md-offset-6"
+  div class="col-md-4 col-md-offset-4"
     div class="page-header"
       = @truck.name
 
@@ -80,5 +80,7 @@ div class="jumbotron"
 
     div class="user_id"
       = @truck.user_id
+
+  = render 'twitter_timeline'
 
   #truck-map data-truck="#{@truck.id}" data-location="#{@truck.location.id}"
