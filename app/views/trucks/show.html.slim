@@ -55,26 +55,23 @@ div class="jumbotron"
       = @truck.sunday_open
       |&nbsp; - &nbsp;
       = @truck.sunday_close
+
       br
+      br
+
       |Accepting:
-    div class="cash"
-      - if @truck.cash == true
-        | Cash
-    div class="visa"
-      - if @truck.visa == true
-        | Visa
-
-    div class="mastercard"
-      - if @truck.mastercard == true
-        | Master Card
-
-    div class="discover"
-      - if @truck.discover == true
-        | Discover
-
-    div class="american_express"
-      - if @truck.american_express == true
-        | American Express
+    div class="payment-type"
+      ul
+        - if @truck.cash
+          li  Cash
+        - if @truck.visa
+          li  Visa
+        - if @truck.mastercard
+          li  Master Card
+        - if @truck.discover
+          li  Discover
+        - if @truck.american_express
+          li  American Express
 
     div class="user_id"
       = @truck.user_id
