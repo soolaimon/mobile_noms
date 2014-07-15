@@ -58,25 +58,23 @@ div class="jumbotron"
       br
       |Accepting:
     div class="cash"
-      |cash: &nbsp;&nbsp;
-      = @truck.cash
-
+      - if @truck.cash == true
+        | Cash
     div class="visa"
-      |Visa: &nbsp;&nbsp;
-      = @truck.visa
+      - if @truck.visa == true
+        | Visa
 
     div class="mastercard"
-      |Mastercard: &nbsp;&nbsp;
-      = @truck.mastercard
+      - if @truck.mastercard == true
+        | Master Card
 
     div class="discover"
-      |Discover: &nbsp;&nbsp;
-      = @truck.discover
+      - if @truck.discover == true
+        | Discover
 
     div class="american_express"
-      |American Express: &nbsp;&nbsp;
-      = @truck.american_express
-
+      - if @truck.american_express == true
+        | American Express
 
     div class="user_id"
       = @truck.user_id
