@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
 user = User.first
 
 t1 = Truck.new(
@@ -28,8 +20,8 @@ t1 = Truck.new(
   saturday_close: "7:00 pm",
   sunday_open: "7:00 am",
   sunday_close: "7:00 pm"
-
   )
+
 t1.save
 
 t2 = Truck.new(
@@ -67,6 +59,3 @@ loc2 = Location.new({
   })
 
 loc2.save
-
-
-
