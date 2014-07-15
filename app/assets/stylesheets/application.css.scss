@@ -21,6 +21,10 @@
   margin: -12px;
 }
 
+div.glyphicon.glyphicon-info-sign a, div.glyphicon.glyphicon-pencil a, div.glyphicon.glyphicon-trash a {
+  text-decoration: none;
+}
+
 .hour1 {
   color: #17AD21;
 }
