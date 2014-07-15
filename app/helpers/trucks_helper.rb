@@ -12,6 +12,8 @@ module TrucksHelper
 
     [*1..6].each {|i| times << "#{i}:00 am" << "#{i}:30 am"}
 
+    times << 'Closed'
+
     times
   end
 end
