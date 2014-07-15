@@ -12,8 +12,6 @@ RSpec.describe LocationsController, :type => :controller do
         put :update, id: @location.id, truck_id: @location.truck.id, location: {latitude: 30.2, longitude: 40.222}
         expect(@location.reload.latitude).to eq 30.2
         expect(@location.reload.longitude).to eq 40.222
-        expect(response).to be_redirect
-        expect(response).to redirect_to trucks_path 
       end
     end
   end
