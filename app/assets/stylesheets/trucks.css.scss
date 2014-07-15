@@ -7,13 +7,33 @@
   color: #17AD21;
 }
 
-.food-type {
-  font-size: 20px;
+div.jumbotron div.col-md-12 {
+  font-size: 17px;
 }
 
+.food-type {
+  font-size: 20px;
+  color: #16AB5C;
+}
 
-.monday {
+.food-description {
+  color: #DB491D;
+}
 
+.pay, .user_id {
+  color: #16A2CC;
+}
+
+.id {
+  color: black;
+}
+
+div.col-md-4 h1 {
+  color: #DB491D;
+}
+
+.monday, .tuesday, .wednesday, .thursday, .friday, .saturday, .sunday {
+  color: #16AB5C;
 }
 
 #truck-map {

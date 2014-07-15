@@ -1,80 +1,107 @@
-h1 = @truck.name.titleize
-
 div class="jumbotron"
   div class="col-md-12"
     .row
       div class="col-md-4"
+        h1 = @truck.name.titleize
         = image_tag(@truck.image.url(:logo))
-        div class="page-header"
-          = @truck.name
+        / div class="page-header"
+        /   = @truck.name
 
         div class="food-type"
           = @truck.food_type
 
         div class="food-description"
+          | "
           = @truck.description
+          | "
 
-        div class="monday"
-          |Monday: &nbsp;
-          = @truck.monday_open
-          |&nbsp; - &nbsp;
-          = @truck.monday_close
+        div class="row"
+          div class="col-md-4"
+            div class="monday"
+              |Monday: &nbsp;
+          div class="col-md-4"
+            = @truck.monday_open
+          div class="col-md-4"
+            = @truck.monday_close
 
-        div class="tuesday"
-          |Tuesday: &nbsp;
-          = @truck.tuesday_open
-          |&nbsp; - &nbsp;
-          = @truck.tuesday_close
+          div class="col-md-4"
+            div class="tuesday"
+              |Tuesday: &nbsp;
+          div class="col-md-4"
+            = @truck.tuesday_open
+          div class="col-md-4"
+            = @truck.tuesday_close
 
-        div class="wednesday"
-          |Wednesday: &nbsp;
-          = @truck.wednesday_open
-          |&nbsp; - &nbsp;
-          = @truck.wednesday_close
+          div class="col-md-4"
+            div class="wednesday"
+              |Wednesday:
+          div class="col-md-4"
+            = @truck.wednesday_open
+          div class="col-md-4"
+            = @truck.wednesday_close
 
-        div class="thursday"
-          |Thursday: &nbsp;
-          = @truck.thursday_open
-          |&nbsp; - &nbsp;
-          = @truck.thursday_close
+          div class="col-md-4"
+            div class="thursday"
+              |Thursday: &nbsp;
+          div class="col-md-4"
+            = @truck.thursday_open
+          div class="col-md-4"
+            = @truck.thursday_close
 
-        div class="friday"
-          |Friday: &nbsp;
-          = @truck.friday_open
-          |&nbsp; - &nbsp;
-          = @truck.friday_close
+          div class="col-md-4"
+            div class="friday"
+              |Friday: &nbsp;
+          div class="col-md-4"
+            = @truck.friday_open
+          div class="col-md-4"
+            = @truck.friday_close
 
-        div class="saturday"
-          |Saturday: &nbsp;
-          = @truck.saturday_open
-          |&nbsp; - &nbsp;
-          = @truck.saturday_close
+          div class="col-md-4"
+            div class="saturday"
+              |Saturday: &nbsp;
+          div class="col-md-4"
+            = @truck.saturday_open
+          div class="col-md-4"
+            = @truck.saturday_close
 
-        div class="sunday"
-          |Sunday: &nbsp;
-          = @truck.sunday_open
-          |&nbsp; - &nbsp;
-          = @truck.sunday_close
+          div class="col-md-4"
+            div class="sunday"
+              |Sunday: &nbsp;
+          div class="col-md-4"
+            = @truck.sunday_open
+          div class="col-md-4"
+            = @truck.sunday_close
 
           br
           br
 
-          |Accepting:
-        div class="payment-type"
-          ul
-            - if @truck.cash
-              li  Cash
-            - if @truck.visa
-              li  Visa
-            - if @truck.mastercard
-              li  Master Card
-            - if @truck.discover
-              li  Discover
-            - if @truck.american_express
-              li  American Express
+        div class="row"
+          div class="col-md-5"
+            div class="pay"
+              |Payment Type:
+          div class="col-md-6"
+            div class="payment-type"
+              ul
+                - if @truck.cash
+                  li  Cash
+                - if @truck.visa
+                  li  Visa
+                - if @truck.mastercard
+                  li  Master Card
+                - if @truck.discover
+                  li  Discover
+                - if @truck.american_express
+                  li  American Express
 
-        div class="user_id"
-          = @truck.user_id
+        div class="row"
+          div class="col-md-5"
+            div class="user_id"
+              | Truck id: &nbsp;&nbsp;
+          div class="col-md-6"
+            div class="id"
+              ul
+                li = @truck.user_id
+
 
 
       div class="col-md-8"
