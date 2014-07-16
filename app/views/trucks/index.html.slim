@@ -28,11 +28,14 @@ div class="jumbotron"
         .btn.btn-default.truck-delete
           = link_to truck_path(truck.id), method: :delete, data: { confirm: "Are you sure you?"}
             .glyphicon.glyphicon-trash
+
         | &nbsp;&nbsp;
         / Geocodes location
         a.geolocate href="#" data-truck="#{truck.id}" data-location="#{truck.location.id}"
           span.btn.btn-success
             i.glyphicon.glyphicon-pushpin
+
+
 
 
 
