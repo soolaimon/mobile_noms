@@ -6,5 +6,6 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up).concat([ :first_name, :last_name, :phone ])
+    devise_parameter_sanitizer.for(:account_update).concat([ :first_name, :last_name, :phone])
   end
 end

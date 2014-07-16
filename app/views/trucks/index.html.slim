@@ -8,16 +8,24 @@ div class="jumbotron"
       div class="col-md-1"
         = truck.id
       div class="col-md-9"
-        = link_to('Truck Info', truck_path(truck.id))
-        | &nbsp;|&nbsp;
-        = link_to( "Edit Truck Info", edit_truck_path(truck.id))
-        | &nbsp;|&nbsp;
-        = link_to( "Delete This Truck", truck_path(truck.id), method: :delete, data: { confirm: 'Are you sure?'})
-        | &nbsp;|&nbsp;
+        .btn.btn-default
+          .glyphicon.glyphicon-info-sign
+            = link_to(' Info', truck_path(truck.id))
+        | &nbsp;&nbsp;
+        .btn.btn-default
+          .glyphicon.glyphicon-pencil
+            = link_to( " Edit Truck", edit_truck_path(truck.id))
+        | &nbsp;&nbsp;
+        .btn.btn-default
+          .glyphicon.glyphicon-trash
+            = link_to( " Delete Truck", truck_path(truck.id), method: :delete, data: { confirm: 'Are you sure?'})
+        | &nbsp;&nbsp;
         / Geocodes location
         a.geolocate href="#" data-truck="#{truck.id}" data-location="#{truck.location.id}"
-          span
-            i.fa.fa-crosshairs
-        | |
+          span.btn.btn-success
+            i.glyphicon.glyphicon-pushpin
+              |  Location
+        |
         / need a link to edit_truck_location path for manual update
+        br
         br
