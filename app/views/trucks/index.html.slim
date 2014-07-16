@@ -5,6 +5,13 @@
 
 h1 My Trucks Index Page
 
+button.btn.btn-default data-placement="top" data-toggle="tooltip" title=("Tooltip on top") type="button"  Tooltip on top
+
+
+
+
+
+
 div class="jumbotron"
   - @trucks.each do |truck|
     div class="row"
@@ -16,23 +23,22 @@ div class="jumbotron"
         = truck.id
       div class="col-md-7"
         .btn.btn-default
-          .glyphicon.glyphicon-info-sign
-            = link_to(' Info', truck_path(truck.id))
+          = link_to truck_path(truck.id) do
+             .glyphicon.glyphicon-info-sign
         | &nbsp;&nbsp;
         .btn.btn-default
-          .glyphicon.glyphicon-pencil
-            = link_to( " Edit Truck", edit_truck_path(truck.id))
+          = link_to edit_truck_path(truck.id) do
+             .glyphicon.glyphicon-pencil
         | &nbsp;&nbsp;
-        .btn.btn-default
-          .glyphicon.glyphicon-trash
-            = link_to( " Delete Truck", truck_path(truck.id), method: :delete, data: { confirm: 'Are you sure?'})
+        .btn.btn-default.truck-delete
+          = link_to truck_path(truck.id), method: :delete, data: { confirm: "Are you sure you?"}
+            .glyphicon.glyphicon-trash
         | &nbsp;&nbsp;
         / Geocodes location
         a.geolocate href="#" data-truck="#{truck.id}" data-location="#{truck.location.id}"
           span.btn.btn-success
             i.glyphicon.glyphicon-pushpin
-              |  Location
-        |
+
         / need a link to edit_truck_location path for manual update
         br
         br
