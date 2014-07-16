@@ -21,7 +21,7 @@
   margin: -12px;
 }
 
-div.glyphicon.glyphicon-info-sign a, div.glyphicon.glyphicon-pencil a, div.glyphicon.glyphicon-trash a {
+div.glyphicon.glyphicon-pencil a, div.glyphicon.glyphicon-trash a {
   text-decoration: none;
 }
 
@@ -60,4 +60,8 @@ input.button {
 .unhappy {
   color: #16A2CC;
   font-size: 17px;
+}
+
+.btn.btn-danger.truck-delete a {
+  color: white;
 }

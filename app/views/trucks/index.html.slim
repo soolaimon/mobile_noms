@@ -18,14 +18,10 @@ div class="jumbotron"
           = link_to( truck.id, truck_path(truck.id))
       div class="col-md-7"
         .btn.btn-default
-          = link_to truck_path(truck.id) do
-             .glyphicon.glyphicon-info-sign
-        | &nbsp;&nbsp;
-        .btn.btn-default
           = link_to edit_truck_path(truck.id) do
              .glyphicon.glyphicon-pencil
         | &nbsp;&nbsp;
-        .btn.btn-default.truck-delete
+        .btn.btn-danger.truck-delete
           = link_to truck_path(truck.id), method: :delete, data: { confirm: "Are you sure you?"}
             .glyphicon.glyphicon-trash
 
