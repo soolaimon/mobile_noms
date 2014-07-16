@@ -16,7 +16,7 @@ div class="jumbotron"
           .glyphicon.glyphicon-pencil
             = link_to( " Edit Truck", edit_truck_path(truck.id))
         | &nbsp;&nbsp;
-        .btn.btn-danger
+        .btn.btn-default
           .glyphicon.glyphicon-trash
             = link_to( " Delete Truck", truck_path(truck.id), method: :delete, data: { confirm: 'Are you sure?'})
         | &nbsp;&nbsp;
