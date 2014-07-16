@@ -8,11 +8,13 @@ h1 My Trucks Index Page
 div class="jumbotron"
   - @trucks.each do |truck|
     div class="row"
+      div class="col-md-1"
+        = image_tag(truck.image.url(:logosm))
       div class="col-md-2"
         = truck.name
       div class="col-md-1"
         = truck.id
-      div class="col-md-9"
+      div class="col-md-7"
         .btn.btn-default
           .glyphicon.glyphicon-info-sign
             = link_to(' Info', truck_path(truck.id))
