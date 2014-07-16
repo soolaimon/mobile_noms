@@ -5,22 +5,17 @@
 
 h1 My Trucks Index Page
 
-button.btn.btn-default data-placement="top" data-toggle="tooltip" title=("Tooltip on top") type="button"  Tooltip on top
-
-
-
-
-
-
 div class="jumbotron"
   - @trucks.each do |truck|
     div class="row"
       div class="col-md-1"
         = image_tag(truck.image.url(:logosm))
-      div class="col-md-2"
-        = truck.name
+      div class="col-md-3"
+        .name-index
+          = link_to( truck.name, truck_path(truck.id))
       div class="col-md-1"
-        = truck.id
+        .id-index
+          = link_to( truck.id, truck_path(truck.id))
       div class="col-md-7"
         .btn.btn-default
           = link_to truck_path(truck.id) do
@@ -39,6 +34,11 @@ div class="jumbotron"
           span.btn.btn-success
             i.glyphicon.glyphicon-pushpin
 
+
+
+        | &nbsp;&nbsp;
         / need a link to edit_truck_location path for manual update
+        .btn.btn-default
+          = link_to("Edit Location", edit_truck_location_path(truck.id, truck.location))
         br
         br

@@ -8,5 +8,8 @@ div class='form-group'
     br
     = submit_tag "Search", :name => nil, class: 'btn btn-primary'
 
-div class="row"
-  = image_tag "logo.png", class: 'img-responsive'
+  div class="row"
+    = image_tag "logo.png", class: 'img-responsive'
+
+div class="form-group"
+  = render 'mailchimp'

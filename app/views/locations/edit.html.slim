@@ -1,0 +1,15 @@
+h1 Update Truck Location
+
+= form_for [@location.truck, @location] do |f|
+  .form-group
+    = f.text_field :street_address, placeholder: "Street Address", class: "form-control"
+  .form-group
+    = f.text_field :street_address2, placeholder: "Street Address 2", class: "form-control"
+  .form-group
+    = f.text_field :city, placeholder: "City", class: "form-control"
+  .form-group
+    = f.text_field :state, placeholder: "State", class: "form-control"
+  .form-group
+    = f.text_field :zip, placeholder: "Zip", class: "form-control"
+  .form-group
+    = f.submit "Save", class: "btn btn-primary"

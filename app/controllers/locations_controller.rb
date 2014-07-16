@@ -6,10 +6,22 @@ class LocationsController < ApplicationController
     @location = Location.find(params[:id])
   end
 
+  def edit
+   @location = Location.find(params[:id]) 
+  end
+
   def update
     @location = Truck.find(params[:truck_id]).location
-    @location.update_attributes(location_params)
-    respond_with @location
+    respond_to do |format|
+      if @location.update_attributes(location_params)
+        # binding.pry
+        format.html { redirect_to trucks_path }
+        format.json{ render json: @location}
+      else
+        render "trucks/index"
+      end
+
+    end
   end
 
   private
