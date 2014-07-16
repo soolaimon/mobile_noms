@@ -1,3 +1,8 @@
+.form-group
+  = text_field_tag :search, params[:search], placeholder: "Enter truck name, location, food type...", autofocus: true, class: 'form-control'
+  br
+  = submit_tag "Search", :name => nil, class: 'btn btn-primary'
+
 div class="jumbotron"
   div class="col-md-12"
     .row
@@ -102,7 +107,7 @@ div class="jumbotron"
               ul
                 li = @truck.user_id
 
-      
+
 
       div class="col-md-8"
         = render 'twitter_timeline'

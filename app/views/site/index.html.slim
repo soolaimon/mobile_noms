@@ -4,7 +4,7 @@ p Welcome to MobileNoms. Find food trucks with full of noms by you.
 div class='form-group'
   = form_tag trucks_path, :method => 'get' do
   p
-    = text_field_tag :search, params[:search], autofocus: true, class: 'form-control'
+    = text_field_tag :search, params[:search], placeholder: "Enter truck name, location, food type...", autofocus: true, class: 'form-control'
     br
     = submit_tag "Search", :name => nil, class: 'btn btn-primary'
 
