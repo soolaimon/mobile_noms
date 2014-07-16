@@ -10,10 +10,12 @@ div class="jumbotron"
     div class="row"
       div class="col-md-1"
         = image_tag(truck.image.url(:logosm))
-      div class="col-md-2"
-        = truck.name
+      div class="col-md-3"
+        .name-index
+         = truck.name
       div class="col-md-1"
-        = truck.id
+        .id-index
+          = truck.id
       div class="col-md-7"
         .btn.btn-default
           .glyphicon.glyphicon-info-sign
