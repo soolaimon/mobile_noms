@@ -1,3 +1,8 @@
+.form-group
+  = text_field_tag :search, params[:search], placeholder: "Enter truck name, location, food type...", autofocus: true, class: 'form-control'
+  br
+  = submit_tag "Search", :name => nil, class: 'btn btn-primary'
+
 h1 My Trucks Index Page
 
 div class="jumbotron"

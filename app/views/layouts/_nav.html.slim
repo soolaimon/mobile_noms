@@ -6,7 +6,6 @@
       span.icon-bar
       span.icon-bar
 
-
     = link_to(image_tag("mobnom_logosm_b5.png"), root_path, class: "navbar-brand")
   #bs-example-navbar-collapse-1.collapse.navbar-collapse
     ul.nav.navbar-nav.pull-right
@@ -16,5 +15,5 @@
         li = link_to "Add Noms Truck", new_truck_path
         li = link_to "Logout", destroy_user_session_path, method: :delete
       -else
-        li = link_to "Sign your truck up!", new_user_registration_path
+        li = link_to "Sign up", new_user_registration_path
         li = link_to "Sign in", new_user_session_path
