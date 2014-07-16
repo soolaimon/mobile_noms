@@ -1,9 +1,8 @@
 class LocationsController < ApplicationController
   respond_to :html, :json
 
-
   def show
-    @location = Location.find(params[:id])
+    @location = Location.find(params[:id])   
   end
 
   def edit
@@ -11,10 +10,9 @@ class LocationsController < ApplicationController
   end
 
   def update
-    @location = Truck.find(params[:truck_id]).location
+    @location = Location.find(params[:id])
     respond_to do |format|
       if @location.update_attributes(location_params)
-        # binding.pry
         format.html { redirect_to trucks_path }
         format.json{ render json: @location}
       else
