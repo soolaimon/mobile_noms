@@ -48,14 +48,3 @@ t2 = Truck.new(
 
 t2.save
 
-loc1 = Location.new({
-  street_address: "813 Melrose Terrace", city: "Newport News", state: "VA", zip: "23608", truck_id: t1.id
-  })
-
-loc1.save
-
-loc2 = Location.new({
-  street_address: "184 N 50 E", city: "Orem", state: "UT", zip: "84057", truck_id: t2.id
-  })
-
-loc2.save
