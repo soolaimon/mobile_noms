@@ -36,5 +36,7 @@ div class="jumbotron"
               |  Location
         |
         / need a link to edit_truck_location path for manual update
+        .btn.btn-default
+          = link_to("Edit Location", edit_truck_location_path(truck.id, truck.location))
         br
         br

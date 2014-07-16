@@ -6,7 +6,6 @@ class Truck < ActiveRecord::Base
   has_one :location, dependent: :destroy
   validates :name, presence: true
 
-
   searchkick
 
   private
