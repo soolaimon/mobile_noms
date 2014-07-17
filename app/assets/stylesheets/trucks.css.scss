@@ -13,11 +13,11 @@ div.jumbotron div.col-md-12 {
 
 .food-type {
   font-size: 20px;
-  color: #16AB5C;
+  color: #DB491D;
 }
 
 .food-description {
-  color: #DB491D;
+  color: #778899;
 }
 
 .pay, .user_id {
@@ -42,12 +42,13 @@ div.col-md-4 h1 {
 }
 
 div#truck-map {
-  box-shadow: 0px 0px 10px;
+  box-shadow: 0px 0px 20px;
 }
 
 iframe#twitter-widget-0.twitter-timeline.twitter-timeline-rendered {
   float: right;
   height: 550px;
+  box-shadow: 0px 0px 20px;
 }
 
 .name-index, .id-index {
@@ -63,5 +64,10 @@ iframe#twitter-widget-0.twitter-timeline.twitter-timeline-rendered {
 .glyphicon.glyphicon-picture {
   color: black;
   font-size: 30px;
+  padding-bottom: 7px;
 
+}
+
+div.col-md-3 {
+  padding: 10px;
 }
