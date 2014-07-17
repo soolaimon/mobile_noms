@@ -98,14 +98,9 @@ div class="jumbotron"
                 - if @truck.american_express
                   li  American Express
 
-        div class="row"
-          div class="col-md-5"
-            div class="user_id"
-              | Truck id: &nbsp;&nbsp;
-          div class="col-md-6"
-            div class="id"
-              ul
-                li = @truck.user_id
+          br
+          br
+
 
       div class="col-md-8"
         = render 'twitter_timeline'
