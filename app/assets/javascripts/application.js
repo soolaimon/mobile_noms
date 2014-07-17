@@ -16,3 +16,4 @@
 //= require gmaps
 //= require chosen-jquery
 //= require trucks.js
+//= require site.js
