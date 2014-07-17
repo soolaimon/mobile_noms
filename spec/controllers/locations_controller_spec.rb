@@ -6,7 +6,7 @@ RSpec.describe LocationsController, :type => :controller do
     before do
       @location = create(:location)
     end
-    it "should show render the json for the location I selected", :focus do
+    it "should show render the json for the location I selected" do
       get :show, truck_id: @location.truck.id, id: @location.id, format: :json
       expect(assigns(:location).id).to eq @location.id    
       expect(response).to render_template('show')

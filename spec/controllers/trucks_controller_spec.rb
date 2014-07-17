@@ -112,6 +112,14 @@ RSpec.describe TrucksController, :type => :controller do
         expect(response).to redirect_to trucks_path
       end
     end
+    context "when failing to save truck" do
+      it "should not change the truck name and should render :edit" do
+        put :update, id: @truck.id, truck: {name: nil}
+        expect(@truck.reload.name).to eq 'old' 
+        expect(response).to render_template(:edit) 
+      end
+    
+    end
   end
 
     describe '#destroy' do

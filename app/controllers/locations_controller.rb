@@ -15,8 +15,6 @@ class LocationsController < ApplicationController
       if @location.update_attributes(location_params)
         format.html { redirect_to trucks_path }
         format.json{ render json: @location}
-      else
-        render "trucks/index"
       end
 
     end
