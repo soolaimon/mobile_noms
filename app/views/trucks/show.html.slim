@@ -11,7 +11,8 @@ div class="jumbotron"
         = image_tag(@truck.image.url(:logo))
         / div class="page-header"
         /   = @truck.name
-
+        br
+        br
         div class="food-type"
           = @truck.food_type
 
@@ -19,64 +20,63 @@ div class="jumbotron"
           | "
           = @truck.description
           | "
-
+        br
         div class="row"
           div class="col-md-4"
             div class="monday"
               |Monday: &nbsp;
           div class="col-md-4"
-            = @truck.monday_open
+            li  = @truck.monday_open
           div class="col-md-4"
-            = @truck.monday_close
-
+            li  = @truck.monday_close
+          br
           div class="col-md-4"
             div class="tuesday"
               |Tuesday: &nbsp;
           div class="col-md-4"
-            = @truck.tuesday_open
+            li  = @truck.tuesday_open
           div class="col-md-4"
-            = @truck.tuesday_close
-
+            li  = @truck.tuesday_close
+          br
           div class="col-md-4"
             div class="wednesday"
               |Wednesday:
           div class="col-md-4"
-            = @truck.wednesday_open
+            li  = @truck.wednesday_open
           div class="col-md-4"
-            = @truck.wednesday_close
-
+            li  = @truck.wednesday_close
+          br
           div class="col-md-4"
             div class="thursday"
               |Thursday: &nbsp;
           div class="col-md-4"
-            = @truck.thursday_open
+            li  = @truck.thursday_open
           div class="col-md-4"
-            = @truck.thursday_close
-
+            li  = @truck.thursday_close
+          br
           div class="col-md-4"
             div class="friday"
               |Friday: &nbsp;
           div class="col-md-4"
-            = @truck.friday_open
+            li  = @truck.friday_open
           div class="col-md-4"
-            = @truck.friday_close
-
+            li  = @truck.friday_close
+          br
           div class="col-md-4"
             div class="saturday"
               |Saturday: &nbsp;
           div class="col-md-4"
-            = @truck.saturday_open
+            li  = @truck.saturday_open
           div class="col-md-4"
-            = @truck.saturday_close
-
+            li  = @truck.saturday_close
+          br
           div class="col-md-4"
             div class="sunday"
               |Sunday: &nbsp;
           div class="col-md-4"
-            = @truck.sunday_open
+            li  = @truck.sunday_open
           div class="col-md-4"
-            = @truck.sunday_close
-
+            li  = @truck.sunday_close
           br
           br
 
@@ -107,7 +107,8 @@ div class="jumbotron"
               ul
                 li = @truck.user_id
 
-
+          br
+          br
 
       div class="col-md-8"
         = render 'twitter_timeline'
