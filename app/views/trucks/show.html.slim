@@ -84,7 +84,7 @@ div class="jumbotron"
           div class="col-md-5"
             div class="pay"
               |Payment Type:
-          div class="col-md-6"
+          .col-md-6
             div class="payment-type"
               ul
                 - if @truck.cash
@@ -98,19 +98,10 @@ div class="jumbotron"
                 - if @truck.american_express
                   li  American Express
 
-        div class="row"
-          div class="col-md-5"
-            div class="user_id"
-              | Truck id: &nbsp;&nbsp;
-          div class="col-md-6"
-            div class="id"
-              ul
-                li = @truck.user_id
-
           br
           br
 
-      div class="col-md-8"
+      .col-md-8
         = render 'twitter_timeline'
 
   #truck-map data-truck="#{@truck.id}" data-location="#{@truck.location.id}"
