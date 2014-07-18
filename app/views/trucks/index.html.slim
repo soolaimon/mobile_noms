@@ -17,12 +17,13 @@ div class="jumbotron"
         .id-index
           = link_to( truck.id, truck_path(truck.id))
       div class="col-md-7"
-        .btn.btn-default
-          = link_to edit_truck_path(truck.id) do
-             .glyphicon.glyphicon-pencil
+        = link_to edit_truck_path(truck.id)
+          .btn.btn-default
+            .glyphicon.glyphicon-pencil
         | &nbsp;&nbsp;
-        .btn.btn-danger.truck-delete
-          = link_to truck_path(truck.id), method: :delete, data: { confirm: "Are you sure you?"}
+
+        = link_to truck_path(truck.id), method: :delete, data: { confirm: "Are you sure you?"}
+          .btn.btn-danger.truck-delete
             .glyphicon.glyphicon-trash
 
         | &nbsp;&nbsp;
@@ -37,7 +38,7 @@ div class="jumbotron"
 
         | &nbsp;&nbsp;
         / need a link to edit_truck_location path for manual update
-        .btn.btn-default
+        span.btn.btn-default
           = link_to("Edit Location", edit_truck_location_path(truck.id, truck.location))
         br
         br
