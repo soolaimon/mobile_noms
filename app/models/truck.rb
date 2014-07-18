@@ -10,8 +10,8 @@ class Truck < ActiveRecord::Base
   belongs_to :user
   after_create :create_location
   has_one :location, dependent: :destroy
-  validates :name, presence: true
 
+  validates :name, :twitter_handle, presence: true
 
   private
 

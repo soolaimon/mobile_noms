@@ -1,7 +1,7 @@
 class TrucksController < ApplicationController
   before_action :ensure_user_is_logged_in, only: [:index, :new, :create, :edit, :update, :destroy]
   before_action :get_truck, only: [:show, :edit, :update, :destroy]
-  before_action :get_times, only: [:new, :edit]
+  before_action :get_times, only: [:new, :edit, :update, :create]
 
   def index
     # Truck.reindex
@@ -56,7 +56,8 @@ class TrucksController < ApplicationController
 
   def truck_params
 
-    params.require(:truck).permit(:name, :food_type, :user_id, :description, :monday_open, :monday_close, :tuesday_open, :tuesday_close, :wednesday_open, :wednesday_close, :thursday_open, :thursday_close, :friday_open, :friday_close, :saturday_open, :saturday_close, :sunday_open, :sunday_close, :cash, :visa, :discover, :mastercard, :american_express, :image, :twitter_handle)
+    params.require(:truck).permit(:name, :food_type, :user_id, :description, :monday_open, :monday_close, :tuesday_open, :tuesday_close, :wednesday_open, :wednesday_close, :thursday_open, :thursday_close, :friday_open, :friday_close, :saturday_open, :saturday_close, :sunday_open, :sunday_close,
+     :cash, :visa, :discover, :mastercard, :american_express, :image, :twitter_handle)
 
   end
 

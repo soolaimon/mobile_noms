@@ -1,0 +1,14 @@
+div class='form-group'
+  = form_tag search_path, method: :get do
+    = text_field_tag :q, '', placeholder: "Enter truck name, location, food type...", autofocus: true, class: 'form-control'
+    br
+    span.whithin Within:&nbsp;
+    <select name="distance">
+      <option value="5">5 mil</option>
+      <option value="10">10 mil</option>
+      <option value="15">15 mil</option>
+      <option value="20">20 mil</option>
+    </select>
+    br
+    br
+    = submit_tag "Search", class: 'btn btn-primary'

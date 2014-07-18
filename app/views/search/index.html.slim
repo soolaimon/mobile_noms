@@ -1,5 +1,7 @@
 h1 Search Results
 
-- @results.each do |result|
-  p = result.name
-  
+.jumbotron
+  .s_results
+    - @results.each do |result|
+      p.results = result.name
+      p = result.description
