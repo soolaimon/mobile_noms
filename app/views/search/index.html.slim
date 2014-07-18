@@ -2,5 +2,6 @@ h1 Search Results
 
 .jumbotron
   .s_results
-    = @results.each do |result|
+    - @results.each do |result|
       p.results = result.name
+      p = result.description
