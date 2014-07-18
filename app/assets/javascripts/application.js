@@ -15,4 +15,6 @@
 //= require alertify.js
 //= require gmaps
 //= require chosen-jquery
-//= require trucks.js
+//= require trucks
+//= require site
+//= require current_location

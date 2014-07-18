@@ -11,7 +11,7 @@ $(document).ready(function() {
     allow_single_deselect: true,
     no_results_text: 'No results matched',
   });
-  $(document).on('click', '.geolocate', function() {
+  $(document).on('click', '.geolocate-truck', function() {
     var $geocodeBtn = $(this);
     alertify.confirm("The browser is going to get your location, ok?", function (e) {
       if (e) {
