@@ -86,6 +86,10 @@ GEM
       elasticsearch-transport (= 0.4.11)
     elasticsearch-api (0.4.11)
       multi_json
+    elasticsearch-model (0.1.4)
+      activesupport (> 3)
+      elasticsearch (> 0.4)
+      hashie
     elasticsearch-transport (0.4.11)
       faraday
       multi_json
@@ -127,6 +131,10 @@ GEM
     multipart-post (2.0.0)
     orm_adapter (0.5.0)
     pg (0.17.1)
+    pg_search (0.7.6)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
+      arel
     polyglot (0.3.5)
     pry (0.10.0)
       coderay (~> 1.1.0)
@@ -243,6 +251,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_cleaner
   devise
+  elasticsearch-model
   factory_girl_rails
   faker
   font-awesome-sass
@@ -251,6 +260,7 @@ DEPENDENCIES
   jquery-rails
   mini_magick
   pg
+  pg_search
   pry-rails
   rails (= 4.1.1)
   rails_12factor
