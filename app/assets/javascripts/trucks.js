@@ -48,9 +48,6 @@ $(document).ready(function() {
     });
     return false;
   });
-
-
-
 });
 
 var loadMap = function () {
