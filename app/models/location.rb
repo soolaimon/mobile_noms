@@ -1,5 +1,5 @@
 class Location < ActiveRecord::Base
-  include PgSearch
+  
 
   belongs_to :truck
   validates :truck_id, presence: true

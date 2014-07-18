@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root 'site#index'
 
   post '/current_location', to: 'locations#current_location'
-  get '/search' => 'search_results#index'
+  get '/search' => 'search#index'
 
 
   resources :trucks do
