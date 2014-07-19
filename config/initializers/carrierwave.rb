@@ -6,6 +6,7 @@ CarrierWave.configure do |config|
     :aws_secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
     :region => ENV['S3_REGION']
   }
+  # For testing, upload files to local 'tmp' folder.
   if Rails.env.test? || Rails.env.development?
     config.storage = :file
     config.enable_processing = false
@@ -19,4 +20,3 @@ CarrierWave.configure do |config|
   config.fog_directory = ENV['S3_BUCKET_NAME']
 end
 
-# For testing, upload files to local 'tmp' folder.
