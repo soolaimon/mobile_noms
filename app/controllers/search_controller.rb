@@ -1,7 +1,6 @@
 class SearchController < ApplicationController
 
   def index
-
     @text_results = Truck.search(params[:q])
     @results = trucks_in_range(@text_results).compact
   end

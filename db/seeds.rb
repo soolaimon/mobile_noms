@@ -50,3 +50,4 @@ t2 = Truck.new(
 
 t2.save
 
+
