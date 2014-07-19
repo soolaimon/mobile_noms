@@ -10,6 +10,7 @@ gem 'carrierwave'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'chosen-rails'
 gem 'devise'
+gem 'dotenv-rails'
 gem 'elasticsearch-model'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
@@ -21,7 +22,6 @@ gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
 gem 'thin'
 gem 'uglifier', '>= 1.3.0'
-gem 'searchkick', github: 'ankane/searchkick', branch: 'elasticsearch-1.2'
 gem 'slim-rails'
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
@@ -31,6 +31,7 @@ group :development do
   gem 'spring'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'xray-rails'
 end
 group :test do
   gem 'database_cleaner'
@@ -40,7 +41,6 @@ group :test do
 end
 
 group :development, :test do
-  gem 'binding_of_caller'
   gem 'faker'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
