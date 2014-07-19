@@ -4,14 +4,7 @@ class TrucksController < ApplicationController
   before_action :get_times, only: [:new, :edit, :update, :create]
 
   def index
-    # Truck.reindex
-    # puts "++++++++++++++++++++++++++++++++"
-    # trucks = Truck.search "Cupbop"
-    # trucks.each do |truck|
-    #   puts "================#{truck.name}"
-    # end
     @trucks = current_user.trucks
-
   end
 
   def show

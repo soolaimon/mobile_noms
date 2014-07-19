@@ -19,6 +19,7 @@ FactoryGirl.define do
     saturday_close { "7:00 pm"}
     sunday_open { "7:00 am"}
     sunday_close { "7:00 pm"}
+    twitter_handle { "soolaimon" }
     user
   end
 end

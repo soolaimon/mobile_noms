@@ -15,7 +15,7 @@ RSpec.describe TrucksController, :type => :controller do
       @other_truck = (:truck)
     end
 
-    it "should list al lthe trucks for the user" do
+    it "should list all lthe trucks for the user" do
       get :index
       expect(response).to be_success
       expect(assigns(:trucks).count).to eq 3
@@ -67,7 +67,7 @@ RSpec.describe TrucksController, :type => :controller do
     context "when saving a proper record" do
       it "creates a new truck and saves it to DB" do
         expect {
-          post :create, truck: {user_id: @user.id, name: "Pizza"}
+          post :create, truck: {user_id: @user.id, name: "Pizza", twitter_handle: "test"}
         }.to change(Truck, :count).by(1)
       end
     end
