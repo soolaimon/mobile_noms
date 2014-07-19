@@ -20,4 +20,6 @@ class Truck < ActiveRecord::Base
     location.save
   end
 
+
+
 end
