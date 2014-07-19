@@ -58,13 +58,14 @@ var loadMap = function () {
     $.getJSON('/trucks/'+ $truckMap.data('truck') +'/locations/' + $truckMap.data('location') +'.json', function(location) {
       console.log(location);
       var location = location.location;
+
       var gmap = new GMaps({
         div: '#truck-map',
         lat: location.latitude,
         lng: location.longitude
       });
 
-      gmap.addMarker({
+      var marker = gmap.addMarker({
         lat: location.latitude,
         lng: location.longitude,
         infoWindow: {
@@ -73,7 +74,7 @@ var loadMap = function () {
 
       });
 
+      new google.maps.event.trigger(marker, 'click');
     });
   }
 };
-
