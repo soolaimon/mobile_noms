@@ -8,9 +8,10 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Choose what kind of storage to use for this uploader:
   # storage :file
-  storage :fog
+  # storage :fog
 
-  def cache_dir      "#{Rails.root}/tmp/uploads"
+  def cache_dir      
+    "#{Rails.root}/tmp/uploads"
   end
 
   # Override the directory where uploaded files will be stored.

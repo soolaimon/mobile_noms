@@ -7,7 +7,7 @@ RSpec.describe TrucksController, :type => :controller do
 
     before do
       @user = create(:user)
-      @user.confirm!
+    
       sign_in @user
       @truck1 = create(:truck, user_id: @user.id)
       @truck2 = create(:truck, user_id: @user.id)
@@ -30,7 +30,7 @@ RSpec.describe TrucksController, :type => :controller do
   describe "#show" do
     before do
       @user = create(:user)
-      @user.confirm!
+    
       sign_in @user
       @truck = create(:truck, user_id: @user.id)
     end
@@ -45,7 +45,7 @@ RSpec.describe TrucksController, :type => :controller do
   describe "#new" do
     before do
       @user = create(:user)
-      @user.confirm!
+    
       sign_in @user
     end
     it "should create a new instance of truck" do
@@ -60,7 +60,7 @@ RSpec.describe TrucksController, :type => :controller do
 
     before do
       @user = create(:user)
-      @user.confirm!
+    
       sign_in @user
     end
 
@@ -84,7 +84,7 @@ RSpec.describe TrucksController, :type => :controller do
   describe "#edit" do
     before do
       @user = create(:user)
-      @user.confirm!
+    
       sign_in @user
       @truck = create(:truck, user_id: @user.id)
     end
@@ -100,7 +100,7 @@ RSpec.describe TrucksController, :type => :controller do
   describe "#update" do
     before do
       @user = create(:user)
-      @user.confirm!
+    
       sign_in @user
       @truck = create(:truck, name: "old", user_id: @user.id)
     end
@@ -126,7 +126,7 @@ RSpec.describe TrucksController, :type => :controller do
       before do
           @user = create(:user)
           sign_in @user
-          @user.confirm!
+        
           @truck = create(:truck, user_id: @user.id)
       end
       it 'removes the truck from the database' do
