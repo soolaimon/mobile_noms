@@ -27,7 +27,6 @@ gem 'slim-rails'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 group :development do
-  gem 'rails_12factor'
   gem 'spring'
   gem 'better_errors'
   gem 'binding_of_caller'
@@ -45,6 +44,10 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'pry-rails'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 # Use ActiveModel has_secure_password
