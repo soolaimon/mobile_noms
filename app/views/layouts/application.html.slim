@@ -22,8 +22,14 @@ body
 
   =render "layouts/nav"
 
-  p.notice = notice
-  p.alert = alert
+  div id='alerts'
+    div id='alerts-inner'
+      - if notice
+        p.alert.alert-info role='alert'
+          = notice
+      - if alert
+        p.alert.alert-danger role='alert'
+          =alert
 
   .container
     == yield
