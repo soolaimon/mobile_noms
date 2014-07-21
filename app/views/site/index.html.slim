@@ -10,8 +10,7 @@ div class="form-group"
   = render 'mailchimp'
 
 div class="row" id="hello"
-  = image_tag "default_logolg.png", class: 'img-responsive', id: "main_logo"
-
-/ = link_to(image_tag("default_logolg.png"), root_path, id: "main_logo")
-/ click here and IF == loggedin => see Truckview/AddTruck page.
-/ click here and IF !== loggedin => see Login/Signup page.
+  -if user_signed_in?
+    = link_to(image_tag("default_logolg.png"), trucks_path, class: 'img-responsive', id: "main_logo")
+  -else
+    = link_to(image_tag("default_logolg.png"), new_user_session_path, class: 'img-responsive', id: "main_logo")
