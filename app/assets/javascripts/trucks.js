@@ -56,7 +56,7 @@ var loadMap = function () {
 
   if ($truckMap.length) {
     $.getJSON('/trucks/'+ $truckMap.data('truck') +'/locations/' + $truckMap.data('location') +'.json', function(location) {
-      console.log(location);
+      console.log("LOCATION: " + location.location.address);
       var location = location.location;
 
       var gmap = new GMaps({
