@@ -6,9 +6,7 @@ $(document).ready(function() {
       if (e) {
         document.cookie += "agreedLocation";
         getCurrentLocation();
-      } else {
-        
-      }
+      } 
     });
   }else {
     getCurrentLocation();
