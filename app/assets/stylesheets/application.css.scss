@@ -92,12 +92,17 @@ i {
 //   margin-bottom: 0px;
 // }
 
-img#main_logo.img-responsive {
+#hello {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.main {
   margin-right: auto;
   margin-left: auto;
 }
 
-#hello {
-  margin-left: auto;
-  margin-right: auto;
+i.glyphicon.glyphicon-search {
+  color: white;
+  font-size: 15px;
 }
