@@ -5,13 +5,16 @@ class TrucksController < ApplicationController
 
   def index
     @trucks = current_user.trucks
+    @title = 'Trucks'
   end
 
   def show
+    @title = 'Truck'
   end
 
   def new
     @truck = Truck.new
+    @title = 'New Truck'
   end
 
   def create
@@ -27,6 +30,7 @@ class TrucksController < ApplicationController
   end
 
   def edit
+    @title = 'Edit Truck'
   end
 
   def update

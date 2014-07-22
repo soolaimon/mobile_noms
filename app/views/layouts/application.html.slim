@@ -4,7 +4,8 @@ html lang="en"
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
 
-    title == content_for?(:title) ? yield(:title) : "Untitled"
+    title = set_title(@title)
+    = favicon_link_tag "favicon.png"
 
     = stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
     = stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/united/bootstrap.min.css"
@@ -21,8 +22,14 @@ body
 
   =render "layouts/nav"
 
-  p.notice = notice
-  p.alert = alert
+  div id='alerts'
+    div id='alerts-inner'
+      - if notice
+        p.alert.alert-info role='alert'
+          = notice
+      - if alert
+        p.alert.alert-danger role='alert'
+          =alert
 
   .container
     == yield
