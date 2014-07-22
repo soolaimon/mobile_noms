@@ -2,11 +2,13 @@ class LocationsController < ApplicationController
   respond_to :html, :json
 
   def show
-    @location = Location.find(params[:id])   
+    @location = Location.find(params[:id])
   end
 
   def edit
-   @location = Location.find(params[:id]) 
+   @location = Location.find(params[:id])
+   @frequent_location = @location.truck.frequent_locations
+   @truck = Truck.find(params[:truck_id])
   end
 
   def update

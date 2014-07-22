@@ -1,11 +1,4 @@
-h1 Update Truck Location
-
-/ = select_tag
-= link_to("Add Frequent Location", new_truck_frequent_location_path(@location.truck.id))
-p Or choose frequent location
-= select_tag "frequent_locations", options_for_select(@truck.frequent_locations.collect{ |fl| [fl.street_address, fl.street_address2, fl.city, fl.state, fl.zip] })
-
-= form_for [@location.truck, @location] do |f|
+= form_for [@frequent_location.truck, @frequent_location] do |f|
   .form-group
     = f.text_field :street_address, placeholder: "Street Address", class: "form-control"
   .form-group

@@ -10,5 +10,6 @@ Rails.application.routes.draw do
 
   resources :trucks do
     resources :locations
+    resources :frequent_locations
   end
 end
