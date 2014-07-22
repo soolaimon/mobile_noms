@@ -15,14 +15,27 @@ var fullMap = function () {
   if ($cityTrucksMap.length) {
     $.getJSON(url, function (data) {
 
-      var current_location = data.current_location;
+      var currentLat = data.current_location.latitude;
+      var currentLng = data.current_location.longitude;
+
 
       var gmap = new GMaps({
         div: '#city-trucks-map',
-        lat: current_location.latitude,
-        lng: current_location.longitude
+        lat: currentLat,
+        lng: currentLng,
+        zoom: 15 
       });
 
+      var purpleImage = 'http://maps.google.com/mapfiles/ms/icons/purple-dot.png';
+      var personMarker = gmap.addMarker({
+        lat: currentLat,
+        lng: currentLng,
+        infoWindow: {
+          content: '<p>You</p>'
+        }
+      });
+
+      personMarker.setIcon(purpleImage);
 
       $(data.trucks).each(function(index, truck){
         var infoWindow = new google.maps.InfoWindow({
@@ -30,20 +43,16 @@ var fullMap = function () {
                    '<p>' + truck.address + '</p>'
         });
 
+
         var truckMarker = gmap.addMarker({
           lat: truck.latitude,
           lng: truck.longitude,
           title: truck.name,
           infoWindow: infoWindow
         });
-
         new google.maps.event.trigger(truckMarker, 'click');
       });
 
     });
-
   }
-
-
-      
 };
