@@ -5,6 +5,14 @@
 
 h1 {
   font-size: 40px;
+  margin: 0;
+  color: #D6491E;
+}
+
+p.welcome {
+  font-size: 20px;
+  font-weight: 400;
+  color: #D6491E;
 }
 
 .pad-checkbox {
@@ -24,4 +32,8 @@ h1 {
 
 .big-logo {
   text-align: center;
+}
+
+span.col-md-2.col-md-push-7 {
+  margin-top: 17px;
 }

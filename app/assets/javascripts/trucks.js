@@ -50,6 +50,7 @@ $(document).ready(function() {
   });
 });
 
+
 var loadMap = function () {
 
   $truckMap = $('#truck-map');

@@ -9,6 +9,7 @@ class LocationsController < ApplicationController
    @location = Location.find(params[:id])
    @frequent_location = @location.truck.frequent_locations
    @truck = Truck.find(params[:truck_id])
+   @title = 'Edit Location'
   end
 
   def update
