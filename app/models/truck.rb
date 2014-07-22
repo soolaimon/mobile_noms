@@ -10,8 +10,10 @@ class Truck < ActiveRecord::Base
   belongs_to :user
   after_create :create_location
   has_one :location, dependent: :destroy
-
+  has_many :frequent_locations
   validates :name, :twitter_handle, presence: true
+
+  accepts_nested_attributes_for :frequent_locations, allow_destroy: true, reject_if: :has_blank_attributes
 
   private
 

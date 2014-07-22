@@ -1,5 +1,4 @@
 class Location < ActiveRecord::Base
-  
 
   belongs_to :truck
   validates :truck_id, presence: true
@@ -15,9 +14,8 @@ class Location < ActiveRecord::Base
   after_validation :reverse_geocode, if: :coordinates_changed?
   after_validation :geocode, if: :address_changed?
 
-
   attr_writer :address
-  
+
   def address
     "#{street_address} #{street_address2} #{city}, #{state} #{zip}".titleize
   end
@@ -34,4 +32,3 @@ class Location < ActiveRecord::Base
   end
 
 end
-

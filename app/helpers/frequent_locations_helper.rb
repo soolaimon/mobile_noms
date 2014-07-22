@@ -1,0 +1,2 @@
+module FrequentLocationsHelper
+end
