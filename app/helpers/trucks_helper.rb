@@ -16,4 +16,5 @@ module TrucksHelper
 
     times
   end
+
 end
