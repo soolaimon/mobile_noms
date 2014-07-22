@@ -2,21 +2,19 @@ h1 Update Truck Location
 
 
 / = select_tag
-= link_to("Add Frequent Location", new_truck_frequent_location_path(@location.truck.id), class: 'btn btn-success')
-p Or choose frequent location
-= select_tag "frequent_locations", options_for_select(@truck.frequent_locations.collect {|fl| fl.address}), id: "fl-select"
-btn.btn.btn-success#fl Update Fields
 
 = form_for [@location.truck, @location] do |f|
   .form-group
-    = f.text_field :street_address, placeholder: "Street Address", class: "form-control", id: "address-field"
-  .form-group
-    = f.text_field :street_address2, placeholder: "Street Address 2", class: "form-control"
-  .form-group
-    = f.text_field :city, placeholder: "City", class: "form-control"
-  .form-group
-    = f.text_field :state, placeholder: "State", class: "form-control"
-  .form-group
-    = f.text_field :zip, placeholder: "Zip", class: "form-control"
-  .form-group
-    = f.submit "Save", class: "btn btn-primary"
+    = f.label :address
+    = f.text_field :address, placeholder: "Street, City, State, Zip", class: "form-control", id: "address-field"
+    = f.submit "Save Address", class: "btn btn-primary"
+
+br
+
+h4 Select from frequent locations
+
+= select_tag "frequent_locations", options_for_select(@truck.frequent_locations.collect {|fl| fl.address}), id: "fl-select", class: "form-control"
+
+btn.btn.btn-success#fl Update Field
+br
+= link_to("Add Frequent Location", new_truck_frequent_location_path(@location.truck.id), class: 'btn btn-success')

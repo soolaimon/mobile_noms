@@ -18,8 +18,7 @@ class FrequentLocationsController < ApplicationController
   private
 
   def frequent_location_params
-    params.require(:frequent_location).permit(:street_address, :street_address2,
-     :city, :state, :zip)
+    params.require(:frequent_location).permit(:address)
   end
 
 end
