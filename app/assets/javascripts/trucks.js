@@ -5,6 +5,8 @@
 
 $(document).ready(function() {
 
+  frequentLocation();
+
   loadMap();
 
   $('.chosen-select').chosen({
@@ -79,3 +81,27 @@ var loadMap = function () {
     });
   }
 };
+
+var frequentLocation = function () {
+  $('#fl').click(function() {
+
+    $('#address-field').val($('#fl-select').val());
+       
+    return false;
+  });
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

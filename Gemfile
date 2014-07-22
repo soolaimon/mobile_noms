@@ -17,7 +17,6 @@ gem 'jquery-rails'
 gem 'geocoder'
 gem "fog", "~> 1.3.1"
 gem 'font-awesome-sass'
-gem 'nested_form'
 gem 'pg_search'
 gem 'mini_magick'
 gem 'pg'
