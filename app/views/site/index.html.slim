@@ -1,12 +1,18 @@
-h1 MobileNoms
-p Welcome to MobileNoms. Find food trucks with full of noms by you.
+
+p.welcome Find food trucks with full of noms!
 
 div class='form-group'
   =render 'search'
 
-  br
-  div class="row" id="hello"
-    = image_tag "default_logolg.png", class: 'img-responsive', id: "main_logo"
+br
 
 div class="form-group"
   = render 'mailchimp'
+
+div class="row"
+  -if user_signed_in?
+    = link_to(image_tag("default_logolg.png"), trucks_path, class: 'img-responsive', id: "main_logo")
+  -else
+    = link_to(image_tag("default_logolg.png"), new_user_session_path, class: 'img-responsive', id: "main_logo")
+    
+div id="city-trucks-map"
