@@ -9,7 +9,7 @@ br
 div class="form-group"
   = render 'mailchimp'
 
-div class="row" id="hello"
+div class="row"
   -if user_signed_in?
     = link_to(image_tag("default_logolg.png"), trucks_path, class: 'img-responsive', id: "main_logo")
   -else
