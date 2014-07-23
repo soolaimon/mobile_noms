@@ -3,8 +3,17 @@
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready(function() {
-  
-  fullMap();
+  if (document.cookie.indexOf("agreedLocation") < 0){
+  alertify.confirm("Ok if we use your location?", function(e) {
+    if (e) {
+      document.cookie += "agreedLocation";
+      getCurrentLocation();
+    } 
+  });
+  }else {
+    getCurrentLocation();
+  }
+ 
   
 });
 

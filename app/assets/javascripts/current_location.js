@@ -1,17 +1,5 @@
 
 
-$(document).ready(function() {
-  if (document.cookie.indexOf("agreedLocation") < 0){
-    alertify.confirm("Ok if we use your location?", function(e) {
-      if (e) {
-        document.cookie += "agreedLocation";
-        getCurrentLocation();
-      } 
-    });
-  }else {
-    getCurrentLocation();
-  }
-});
 
 var getCurrentLocation = function(){
 GMaps.geolocate({
@@ -29,6 +17,8 @@ GMaps.geolocate({
           alertify.success("Location updated successfully!");
           console.log('success');
           console.log(data);
+          fullMap();
+
         },
         error: function(a,b,c) {
           console.log('fail');
