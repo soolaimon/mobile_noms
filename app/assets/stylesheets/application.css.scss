@@ -21,6 +21,16 @@
   margin: -12px;
 }
 
+div.navbar.navbar-default {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+}
+
+div.container {
+  padding: 60px;
+}
+
 div.glyphicon.glyphicon-pencil a, div.glyphicon.glyphicon-trash a {
   text-decoration: none;
 }
