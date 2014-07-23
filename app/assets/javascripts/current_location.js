@@ -1,6 +1,4 @@
 
-
-
 var getCurrentLocation = function(){
 GMaps.geolocate({
     success: function (position) {
@@ -15,7 +13,6 @@ GMaps.geolocate({
         dataType: "json",
         success: function(data) {
           alertify.success("Location updated successfully!");
-          console.log('success');
           console.log(data);
           fullMap();
 
