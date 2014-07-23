@@ -23,12 +23,8 @@ class LocationsController < ApplicationController
   end
 
   def current_location
-    puts "*******************#{session[:latitude]}"
-    puts "*******************#{session[:longitude]}"
     session[:latitude] = location_params[:latitude]
     session[:longitude] = location_params[:longitude]
-    puts "**********************#{session[:latitude]}"
-    puts "**********************#{session[:longitude]}"
     render json: session
   end
 
