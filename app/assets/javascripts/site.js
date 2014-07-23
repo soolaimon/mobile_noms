@@ -19,6 +19,7 @@ $(document).ready(function() {
 
 var fullMap = function () {
 
+
   var $cityTrucksMap = $('#city-trucks-map');
   var url = "/site.json" ;
   if ($cityTrucksMap.length) {
@@ -26,7 +27,6 @@ var fullMap = function () {
 
       var currentLat = data.current_location.latitude;
       var currentLng = data.current_location.longitude;
-
 
       var gmap = new GMaps({
         div: '#city-trucks-map',
