@@ -14,6 +14,6 @@ div class="row"
   -if user_signed_in?
     = link_to(image_tag("default_logolg.png", class: "main"), trucks_path, class: 'img-responsive', id: "main_logo")
   -else
-    = link_to(image_tag("default_logolg.png"), new_user_session_path, class: 'img-responsive', id: "main_logo")
+    = link_to(image_tag("default_logolg.png", class: "main"), new_user_session_path, class: 'img-responsive', id: "main_logo")
 
 div id="city-trucks-map"
