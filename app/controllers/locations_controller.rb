@@ -6,8 +6,10 @@ class LocationsController < ApplicationController
   end
 
   def edit
-    @title = 'Edit Location'
-    @location = Location.find(params[:id])
+   @location = Location.find(params[:id])
+   @frequent_location = @location.truck.frequent_locations
+   @truck = Truck.find(params[:truck_id])
+   @title = 'Edit Location'
   end
 
   def update
@@ -29,7 +31,6 @@ class LocationsController < ApplicationController
   private
 
   def location_params
-    params.require(:location).permit(:street_address, :street_address2,
-     :city, :state, :zip, :latitude, :longitude)
+    params.require(:location).permit(:address, :latitude, :longitude)
   end
 end

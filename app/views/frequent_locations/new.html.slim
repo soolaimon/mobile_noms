@@ -1,0 +1,5 @@
+= form_for [@frequent_location.truck, @frequent_location] do |f|
+  .form-group
+    = f.text_field :address, placeholder: "Street Address", class: "form-control"
+  .form-group
+    = f.submit "Save", class: "btn btn-primary"
