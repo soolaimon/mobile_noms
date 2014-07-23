@@ -8,7 +8,7 @@ br
 div class="jumbotron"
   - @trucks.each do |truck|
     div class="row"
-      div class="col-md-1"
+      div class="col-md-2"
         = image_tag(truck.image.url(:logosm))
       div class="col-md-3"
         .name-index
@@ -16,13 +16,13 @@ div class="jumbotron"
       div class="col-md-1"
         .id-index
           = link_to( truck.id, truck_path(truck.id))
-      div class="col-md-7"
+      div class="col-md-6"
         = link_to edit_truck_path(truck.id)
           .btn.btn-default
             .glyphicon.glyphicon-pencil
         | &nbsp;&nbsp;
 
-        = link_to truck_path(truck.id), method: :delete, data: { confirm: "Are you sure you?"}
+        = link_to truck_path(truck.id), method: :delete, data: { confirm: "Are you sure to delete this truck?"}
           .btn.btn-danger.truck-delete
             .glyphicon.glyphicon-trash
 
