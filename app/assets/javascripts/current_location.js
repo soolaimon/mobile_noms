@@ -1,6 +1,6 @@
 
 var getCurrentLocation = function(){
-GMaps.geolocate({
+  GMaps.geolocate({
     success: function (position) {
       var latitude = position.coords.latitude;
       var longitude = position.coords.longitude;

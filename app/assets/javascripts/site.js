@@ -3,7 +3,7 @@
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready(function() {
-  if (document.cookie.indexOf("agreedLocation") < 0){
+  if (document.cookie.indexOf("agreedLocation") < 0 && $('#city-trucks-map').length){
   alertify.confirm("Ok if we use your location?", function(e) {
     if (e) {
       document.cookie += "agreedLocation";
@@ -12,7 +12,7 @@ $(document).ready(function() {
   });
   }else {
     getCurrentLocation();
-  }
+   }
  
   
 });
