@@ -13,8 +13,12 @@ $(document).ready(function() {
   }else {
     getCurrentLocation();
    }
- 
-  
+
+   $('#find-yourself').click(function(event) {
+     getCurrentLocaiton();
+     return false;
+   });
+
 });
 
 var fullMap = function () {
