@@ -4,18 +4,25 @@
 
 $(document).ready(function() {
   if (document.cookie.indexOf("agreedLocation") < 0 && $('#city-trucks-map').length){
-  alertify.confirm("Ok if we use your location?", function(e) {
-    if (e) {
-      document.cookie += "agreedLocation";
-      getCurrentLocation();
-    } 
-  });
-  }else {
-    getCurrentLocation();
+    alertify.confirm("Ok if we use your location?", function(e) {
+      if (e) {
+        document.cookie += "agreedLocation";
+        getCurrentLocation();
+
+      }else {
+        getCurrentLocation();
+       }
+     });
    }
- 
-  
-});
+  } );
+
+   $('#find-yourself').click(function(event) {
+     getCurrentLocation();
+     return false;
+   });
+   
+
+
 
 var fullMap = function () {
 
