@@ -1,13 +1,13 @@
 class LocationsController < ApplicationController
-  before_action :find_location, only: [:show, :edit, :update]
   respond_to :html, :json
+  before_action :get_location, only: [:show, :edit, :update]
+  before_action :get_truck, only: [:edit]
 
   def show
   end
 
   def edit
    @frequent_location = @location.truck.frequent_locations
-   @truck = Truck.find(params[:truck_id])
    @title = 'Edit Location'
   end
 
@@ -32,7 +32,11 @@ class LocationsController < ApplicationController
     params.require(:location).permit(:address, :latitude, :longitude)
   end
 
-  def find_location
-    @location = Location.find(params[:id])
+  def get_location
+    @location = Location.find(params[:id]) 
+  end
+
+  def get_truck
+   @truck = Truck.find(params[:truck_id])
   end
 end

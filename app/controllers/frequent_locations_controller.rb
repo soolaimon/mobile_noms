@@ -1,15 +1,13 @@
 class FrequentLocationsController < ApplicationController
 
   def new
-    @truck = Truck.find(params[:truck_id])
-    @frequent_location = @truck.frequent_locations.new
+    @frequent_location = Truck.find(params[:truck_id]).frequent_locations.new
   end
 
   def create
-    @truck = Truck.find(params[:truck_id])
-    @frequent_location = @truck.frequent_locations.new(frequent_location_params)
+    @frequent_location = Truck.find(params[:truck_id]).frequent_locations.new(frequent_location_params)
     if @frequent_location.save
-      redirect_to edit_truck_location_path(@truck.id, @truck.location.id)
+      redirect_to edit_truck_location_path(@frequent_location.truck.id, @frequent_location.truck.location.id)
     else
       render :new
     end
