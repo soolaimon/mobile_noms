@@ -18,7 +18,7 @@ class Truck < ActiveRecord::Base
   private
 
   def create_location
-    location = Location.new(truck_id: self.id)
+    location = Location.new(truck_id: self.id, latitude: 0.0, longitude: 0.0)
     location.save
   end
 
