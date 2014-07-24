@@ -21,6 +21,16 @@
   margin: -12px;
 }
 
+div.navbar.navbar-default {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+}
+
+div.container {
+  padding: 60px;
+}
+
 div.glyphicon.glyphicon-pencil a, div.glyphicon.glyphicon-trash a {
   text-decoration: none;
 }
@@ -38,8 +48,12 @@ div.glyphicon.glyphicon-pencil a, div.glyphicon.glyphicon-trash a {
   }
 }
 
-.hour1 {
+.op {
   color: #17AD21;
+}
+
+.cls {
+  color: #F2521D;
 }
 
 .select1 {
@@ -50,10 +64,6 @@ div.glyphicon.glyphicon-pencil a, div.glyphicon.glyphicon-trash a {
 .select2 {
   position: absolute;
   left: 570px;
-}
-
-.hour2 {
-  color: #F2521D;
 }
 
 #mc_embed_signup {
@@ -82,15 +92,6 @@ input.button {
 i {
   color: #333333;
 }
-
-// .ad01 {
-//   background-color: #2B2A2A;
-//   padding-right:100px;
-//   padding-left: 100px;
-//   margin-left: auto;
-//   margin-right: auto;
-//   margin-bottom: 0px;
-// }
 
 #hello {
   margin-left: auto;

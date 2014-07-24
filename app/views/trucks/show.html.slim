@@ -18,6 +18,14 @@ div class="jumbotron"
         br
         div class="row"
           div class="col-md-4"
+            div class="day"
+              | &nbsp;
+          div class="col-md-4"
+            li class="op" Open
+          div class="col-md-4"
+            li class="cls" Close
+          br
+          div class="col-md-4"
             div class="monday"
               |Monday: &nbsp;
           div class="col-md-4"
@@ -75,22 +83,21 @@ div class="jumbotron"
           br
           br
         div class="row"
-          div class="col-md-5"
+          div class="col-md-4"
             div class="pay"
               |Payment Type:
-          .col-md-6
+          .col-md-8
             div class="payment-type"
-              ul
-                - if @truck.cash
-                  li  Cash
-                - if @truck.visa
-                  li  Visa
-                - if @truck.mastercard
-                  li  Master Card
-                - if @truck.discover
-                  li  Discover
-                - if @truck.american_express
-                  li  American Express
+              - if @truck.cash
+                = image_tag "money.png"
+              - if @truck.visa
+                = image_tag "visa.png"
+              - if @truck.mastercard
+                = image_tag "master.png"
+              - if @truck.discover
+                = image_tag "discover.png"
+              - if @truck.american_express
+                = image_tag "amex.png"
 
           br
           br

@@ -53,7 +53,6 @@ class TrucksController < ApplicationController
   end
 
   def destroy
-    @truck = Truck.find(params[:id])
     @truck.destroy
     redirect_to trucks_path
   end

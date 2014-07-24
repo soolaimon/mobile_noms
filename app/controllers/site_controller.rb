@@ -4,6 +4,8 @@ class SiteController < ApplicationController
   def index
     @title = 'Home'
     trucks = Truck.all
-    @trucks = trucks_in_range(trucks, 20).compact
+    if session[:latitude] != nil && session[:longitude] != nil
+      @trucks = trucks_in_range(trucks, 20).compact
+    end
   end
 end

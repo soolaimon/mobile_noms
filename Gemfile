@@ -30,6 +30,7 @@ gem 'slim-rails'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 group :development do
+  gem 'sandi_meter'
   gem 'spring'
   gem 'binding_of_caller'
   gem 'xray-rails'
