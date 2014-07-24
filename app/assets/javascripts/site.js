@@ -3,12 +3,22 @@
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready(function() {
-  
-  fullMap();
+  if (document.cookie.indexOf("agreedLocation") < 0 && $('#city-trucks-map').length){
+  alertify.confirm("Ok if we use your location?", function(e) {
+    if (e) {
+      document.cookie += "agreedLocation";
+      getCurrentLocation();
+    } 
+  });
+  }else {
+    getCurrentLocation();
+   }
+ 
   
 });
 
 var fullMap = function () {
+
 
   var $cityTrucksMap = $('#city-trucks-map');
   var url = "/site.json" ;
@@ -17,7 +27,6 @@ var fullMap = function () {
 
       var currentLat = data.current_location.latitude;
       var currentLng = data.current_location.longitude;
-
 
       var gmap = new GMaps({
         div: '#city-trucks-map',
