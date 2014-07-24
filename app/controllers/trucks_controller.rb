@@ -6,10 +6,19 @@ class TrucksController < ApplicationController
   def index
     @trucks = current_user.trucks
     @title = 'Trucks'
+
   end
 
   def show
     @title = 'Truck'
+  # if @truck.yelp_id
+
+    # @search = Yelp.client.search( @truck.location, { term: @truck.name, sort: 0 })
+    # @yelp_image = @search.businesses.first.rating_img_url_small
+    # @snippet_text = @search.business.first.snippet_text
+
+    # @search.result_img_url_small - returns the url of the image
+    # @search.id - returns the id of the business
   end
 
   def new
