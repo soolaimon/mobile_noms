@@ -1,5 +1,12 @@
 = form_for [@frequent_location.truck, @frequent_location] do |f|
   .form-group
+    = f.label :"Frequent Location", style: "font-size: 18px;"
     = f.text_field :address, placeholder: "Street Address", class: "form-control"
   .form-group
     = f.submit "Save", class: "btn btn-primary"
+
+= form_for [@frequent_location.truck, @frequent_location] do |f|
+  .form-group.input-group.add-on
+    = text_field :address, '', placeholder: "Street Address City, State, Zip...", autofocus: true, class: 'form-control'
+    .input-group-btn
+      = f.submit "Save", class: "btn btn-primary"
