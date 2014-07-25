@@ -1,14 +1,23 @@
-h2, h3 {
+h2, h3, h4 {
   color: white;
 }
 
 label {
   color: white;
+  &+i {
+    color: white;
+    margin-left:3px;
+  }
 }
 
 .pad-checkbox {
   margin-left: 5px;
 }
+
+.jumbotron {
+  background-color: rgba(168, 168, 168, 0.3);
+}
+
 
 .horizontal-menu {
   padding: 0;
