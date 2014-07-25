@@ -17,6 +17,9 @@
  *= require_tree .
  *= require_self
  */
+
+// $orange: #bf3e11;
+
 .navbar-header img {
   margin: -12px;
 }
@@ -98,9 +101,11 @@ i {
   margin-right: auto;
 }
 
-img.main {
+img#main {
   margin-right: auto;
   margin-left: auto;
+  padding-bottom: 10px;
+  max-width: 100%;
 }
 
 i.glyphicon.glyphicon-search {

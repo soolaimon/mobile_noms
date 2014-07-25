@@ -11,11 +11,11 @@ br
 div class="form-group"
   = render 'mailchimp'
 
-div class="row"
-  div class="col-md-4 col-md-4"
+div class="logolg"
+  div class="col-md-4 col-md-offset-4"
   -if user_signed_in?
-    = link_to(image_tag("default_logolg.png", class: "main"), trucks_path, class: 'img-responsive', id: "main_logo")
+    = link_to(image_tag("default_logolg.png", id: "main"), trucks_path, class: 'img-responsive')
   -else
-    = link_to(image_tag("default_logolg.png", class: "main"), new_user_session_path, class: 'img-responsive', id: "main_logo")
+    = link_to(image_tag("default_logolg.png", id: "main"), new_user_session_path, class: 'img-responsive')
 
 div id="city-trucks-map"
