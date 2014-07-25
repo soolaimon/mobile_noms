@@ -6,10 +6,28 @@ class TrucksController < ApplicationController
   def index
     @trucks = current_user.trucks
     @title = 'Trucks'
+
   end
 
   def show
     @title = 'Truck'
+    # If there is an address for the Truck, run the Yelp search
+    if @truck.location.address
+      # Yelp search.
+      @search = Yelp.client.search( @truck.location.address, { term: @truck.name, sort: 0 })
+      # Set correct Truck
+      # NOTE: @truck.name must match the Yelp name exactly.
+      @yelp_truck = @search.businesses.select{ |a| a.name == @truck.name}.first
+    end
+    # Check to see if a truck is found
+    if @yelp_truck.nil?
+      # Does nothing
+    else
+      # Get the trucks image and snippet if they exist
+      @yelp_image = @yelp_truck.rating_img_url
+      @yelp_snippet = @yelp_truck.snippet_text
+      @yelp_url = @yelp_truck.url
+    end
   end
 
   def new

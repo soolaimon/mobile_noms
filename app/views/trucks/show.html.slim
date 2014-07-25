@@ -15,6 +15,13 @@ div class="jumbotron"
           | "
           = @truck.description
           | "
+          br
+        div class="food-type"
+          = link_to("Yelp Info", @yelp_url) 
+
+        div class="food-description"
+          = @yelp_snippet
+          = image_tag(@yelp_image)
         br
         h4 =link_to "Visit Website", @truck.website
         br
@@ -101,3 +108,4 @@ div class="jumbotron"
 
 
   #truck-map data-truck="#{@truck.id}" data-location="#{@truck.location.id}"
+  img href='<%= @search.name %>'
