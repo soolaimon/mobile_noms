@@ -16,6 +16,8 @@ div class="jumbotron"
           = @truck.description
           | "
         br
+        h4 =link_to "Visit Website", @truck.website
+        br
         div class="row"
           div class="col-md-4"
             div class="day"
@@ -102,7 +104,7 @@ div class="jumbotron"
           br
           br
 
-      .col-md-7
+      .col-md-7.twitter-feed
         = render 'twitter_timeline'
 
 
