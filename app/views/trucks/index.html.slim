@@ -1,11 +1,13 @@
 div class="row"
-  div class="col-md-3"
+  div class="col-md-6"
     h1 My Trucks
-  span class="col-md-2 col-md-push-7"
-    = link_to( "Add Noms Truck", new_truck_path, class: 'btn btn-danger')
+
+  span class="col-md-6"
+    = link_to( "  Add Noms Truck", new_truck_path, class: 'btn btn-danger glyphicon glyphicon-plus submit')
+
 br
 
-div class="jumbotron"
+div class="row"
   - @trucks.each do |truck|
     div class="row"
       div class="col-md-2"
@@ -33,13 +35,10 @@ div class="jumbotron"
             i.glyphicon.glyphicon-pushpin
 
 
-
-
-
         | &nbsp;&nbsp;
         / need a link to edit_truck_location path for manual update
         span.btn.btn-default
           = link_to("Edit Location", edit_truck_location_path(truck.id, truck.location))
+
         br
         br
-       

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post '/current_location', to: 'locations#current_location'
   get '/search' => 'search#index'
 
+  post 'truck/:id' => 'trucks#duplicate', as: :duplicate_truck
 
   resources :trucks do
     resources :locations

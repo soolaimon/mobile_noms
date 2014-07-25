@@ -32,7 +32,8 @@ body
           =alert
 
   .container.main-wrapper
-    == yield
+    div class="jumbotron"
+      == yield
 
   = javascript_include_tag "application"
   = javascript_include_tag "vendor/modernizr"
