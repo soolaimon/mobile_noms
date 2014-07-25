@@ -3,3 +3,5 @@ div class="row"
     h1 Edit Truck Info
 
     = render "truck_form"
+
+  =link_to "Add Similar Truck", duplicate_truck_path(@truck), method: :post, class: "btn btn-success"
