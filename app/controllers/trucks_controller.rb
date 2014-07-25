@@ -17,7 +17,7 @@ class TrucksController < ApplicationController
       @search = Yelp.client.search( @truck.location.address, { term: @truck.name, sort: 0 })
       # Set correct Truck
       # NOTE: @truck.name must match the Yelp name exactly.
-      @yelp_truck = @search.businesses.select{ |a| a.name == @truck.name}.first
+      @yelp_truck = @search.businesses.select{ |a| a.name.capitalize == @truck.name.capitalize}.first
     end
     # Check to see if a truck is found
     if @yelp_truck.nil?
