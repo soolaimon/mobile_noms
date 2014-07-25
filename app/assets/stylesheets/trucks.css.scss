@@ -24,20 +24,20 @@ div.jumbotron div.col-md-12 {
   color: #128FB5;
 }
 
-.id {
-  color: black;
-}
-
-div.col-md-4 h1 {
-  color: #DB491D;
-}
-
-.monday, .tuesday, .wednesday, .thursday, .friday, .saturday, .sunday {
+.work_day {
   color: #16AB5C;
 }
 
-select#truck_monday_open, select#truck_tuesday_open, select#truck_wednesday_open, select#truck_thursday_open, select#truck_friday_open, select#truck_saturday_open, select#truck_sunday_open {
-  color: green;
+.work-day-open select {
+  color: #16AB5C;
+}
+
+.hour1 {
+  color: #16AB5C;
+}
+
+.hour2 {
+  color: #DB491D;
 }
 
 #truck-map {
@@ -48,6 +48,14 @@ select#truck_monday_open, select#truck_tuesday_open, select#truck_wednesday_open
 div#truck-map {
   box-shadow: 0px 0px 20px;
   border-radius: 4px;
+}
+
+a.btn.btn-success {
+  margin-top: 4px;
+}
+
+btn#fl.btn.btn-success, input.btn.btn-primary {
+  margin-top: 10px;
 }
 
 iframe#twitter-widget-0.twitter-timeline.twitter-timeline-rendered {
