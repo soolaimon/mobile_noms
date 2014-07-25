@@ -106,3 +106,9 @@ i.glyphicon.glyphicon-pushpin {
   display: inline;
   padding: 5px;
 }
+
+@media (max-width: 742px) {
+  .duplicate-truck, .submit {
+    width: 100%;
+  }
+}
