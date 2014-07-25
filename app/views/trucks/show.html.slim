@@ -16,6 +16,10 @@ div class="jumbotron"
           = @truck.description
           | "
           br
+        div class="food-type"
+          = link_to("Yelp Info", @yelp_url) 
+
+        div class="food-description"
           = @yelp_snippet
           = image_tag(@yelp_image)
         br

@@ -24,8 +24,9 @@ class TrucksController < ApplicationController
       # Does nothing
     else
       # Get the trucks image and snippet if they exist
-      @yelp_image = @yelp_truck.rating_img_url_small
+      @yelp_image = @yelp_truck.rating_img_url
       @yelp_snippet = @yelp_truck.snippet_text
+      @yelp_url = @yelp_truck.url
     end
   end
 
