@@ -6,12 +6,14 @@ class Truck < ActiveRecord::Base
   pg_search_scope :search, against: [:name, :food_type],
     associated_against: { location: [:street_address, :street_address2, :city, :state, :zip]}
 
-
   belongs_to :user
   after_create :create_location
   has_one :location, dependent: :destroy
   has_many :frequent_locations
   validates :name, :twitter_handle, presence: true
+
+  attr_accessor :address
+
 
   accepts_nested_attributes_for :frequent_locations, allow_destroy: true, reject_if: :has_blank_attributes
 
