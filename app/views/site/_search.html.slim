@@ -1,7 +1,7 @@
 div class='form-group' role="search"
   = form_tag search_path, method: :get do
     div.input-group.add-on
-      = text_field_tag :q, '', placeholder: "Enter truck name, location, food type...", autofocus: true, class: 'form-control'
+      = text_field_tag :q, '', placeholder: "Search for trucks by name, food type...", autofocus: true, class: 'form-control'
       div.input-group-btn
         = button_tag type: 'submit', class: 'btn btn-primary' do
           i.glyphicon.glyphicon-search.icon-padding
@@ -9,8 +9,8 @@ div class='form-group' role="search"
     br
     span.within Within
     select name="distance"
-      option value="5" 5 mile
-      option value="10" 10 mile
-      option value="15" 15 mile
-      option value="20" 20 mile
-      option value="25" 25 mile
+      option value="5" 5 miles
+      option value="10" 10 miles
+      option value="15" 15 miles
+      option value="20" 20 miles
+      option value="25" 25 miles
