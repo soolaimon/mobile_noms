@@ -29,6 +29,15 @@ class TrucksController < ApplicationController
     end
   end
 
+  def duplicate
+    orig_truck = Truck.find(params[:id])
+    @truck = orig_truck.dup
+    @truck.name = "#{orig_truck.name} #{orig_truck.id + 1}"
+    if @truck.save
+      redirect_to edit_truck_path(@truck.id)
+    end
+  end
+
   def edit
     @title = 'Edit Truck'
   end
