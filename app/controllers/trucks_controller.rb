@@ -32,7 +32,7 @@ class TrucksController < ApplicationController
   def duplicate
     orig_truck = Truck.find(params[:id])
     @truck = orig_truck.dup
-    @truck.name = "#{orig_truck.name}-#{@truck.id}"
+    @truck.name = "#{orig_truck.name} #{orig_truck.id + 1}"
     if @truck.save
       redirect_to edit_truck_path(@truck.id)
     end
