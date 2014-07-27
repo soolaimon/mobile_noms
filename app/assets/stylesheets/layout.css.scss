@@ -16,7 +16,10 @@ label {
 
 .jumbotron {
   background-color: rgba(168, 168, 168, 0.3);
-  margin-top: 40px;
+  margin-top: 30px;
+  margin-right: -40px;
+  margin-left: -40px;
+  padding: 20px;  
 }
 
 .btn.btn-success {
