@@ -15,9 +15,6 @@ div class="row"
       div class="col-md-3"
         .name-index
           = link_to( truck.name, truck_path(truck.id))
-      div class="col-md-1"
-        .id-index
-          = link_to( truck.id, truck_path(truck.id))
       div class="col-md-6"
         = link_to edit_truck_path(truck.id)
           .btn.btn-default
