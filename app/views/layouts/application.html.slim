@@ -31,8 +31,9 @@ body
         p.alert.alert-danger role='alert'
           =alert
 
-  .container
-    == yield
+  .container.main-wrapper
+    div class="jumbotron"
+      == yield
 
   = javascript_include_tag "application"
   = javascript_include_tag "vendor/modernizr"

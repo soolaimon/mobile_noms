@@ -17,6 +17,12 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-image:url('black-bg01.jpg');
+  background-attachment:fixed;
+}
+
 .navbar-header img {
   margin: -12px;
 }
@@ -28,7 +34,7 @@ div.navbar.navbar-default {
 }
 
 div.container {
-  padding: 60px;
+  padding: 47px;
 }
 
 div.glyphicon.glyphicon-pencil a, div.glyphicon.glyphicon-trash a {
@@ -98,12 +104,9 @@ i {
   margin-right: auto;
 }
 
-img.main {
+img#main {
   margin-right: auto;
   margin-left: auto;
-}
-
-i.glyphicon.glyphicon-search {
-  color: white;
-  font-size: 15px;
+  padding-bottom: 10px;
+  max-width: 100%;
 }

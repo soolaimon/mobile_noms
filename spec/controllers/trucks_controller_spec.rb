@@ -137,4 +137,20 @@ RSpec.describe TrucksController, :type => :controller do
         expect(response).to redirect_to trucks_path
       end
     end
+
+    describe '#duplicate' do
+      before do
+        @user = create(:user)
+        sign_in @user
+        @truck = create(:truck, name: "Douche Truck")
+      end
+
+      it "should add a new truck with the name Douche Truck 2" do
+        post :duplicate, id: @truck.id
+        expect(Truck.count).to eq 2 
+        expect(response).to be_redirect 
+        expect(assigns(:truck).name).to eq "Douche Truck #{@truck.id + 1}"  
+      end
+        
+    end
 end

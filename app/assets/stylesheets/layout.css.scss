@@ -1,12 +1,32 @@
-p.welcome {
-  font-size: 20px;
-  font-weight: 400;
-  color: #D6491E;
+h2, h3, h4 {
+  color: white;
+}
+
+label {
+  color: white;
+  &+i {
+    color: white;
+    margin-left:3px;
+  }
 }
 
 .pad-checkbox {
   margin-left: 5px;
 }
+
+.jumbotron {
+  background-color: rgba(168, 168, 168, 0.3);
+  margin-top: 30px;
+  margin-right: -40px;
+  margin-left: -40px;
+  padding: 20px;  
+}
+
+.btn.btn-success {
+  background-color: #08BDBD;
+  border-color: #08BDBD;
+}
+
 
 .horizontal-menu {
   padding: 0;
@@ -25,8 +45,4 @@ p.welcome {
 
 span.col-md-2.col-md-push-7 {
   margin-top: 17px;
-}
-
-.icon-padding {
-  margin-right: 10px;
 }

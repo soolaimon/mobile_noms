@@ -35,6 +35,15 @@ class TrucksController < ApplicationController
     end
   end
 
+  def duplicate
+    orig_truck = Truck.find(params[:id])
+    @truck = orig_truck.dup
+    @truck.name = "#{orig_truck.name} #{orig_truck.id + 1}"
+    if @truck.save
+      redirect_to edit_truck_path(@truck.id)
+    end
+  end
+
   def edit
     @title = 'Edit Truck'
   end
@@ -59,7 +68,7 @@ class TrucksController < ApplicationController
   def truck_params
 
     params.require(:truck).permit(:name, :food_type, :user_id, :description, :monday_open, :monday_close, :tuesday_open, :tuesday_close, :wednesday_open, :wednesday_close, :thursday_open, :thursday_close, :friday_open, :friday_close, :saturday_open, :saturday_close, :sunday_open, :sunday_close,
-     :cash, :visa, :discover, :mastercard, :american_express, :image, :twitter_handle)
+     :cash, :visa, :discover, :mastercard, :american_express, :image, :twitter_handle, :website)
 
   end
 

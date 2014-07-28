@@ -40,4 +40,12 @@ RSpec.describe LocationsController, :type => :controller do
       end
     end
   end
+
+  describe "#current_location" do
+    it "should change value of session[:latitude] to 30.1223286 and session[:longitude] to 40.185467" do
+      put :current_location, location: {latitude: 30.1223286, longitude: 40.185467 }
+        expect(session[:latitude]).to eq "30.1223286"
+        expect(session[:longitude]).to eq "40.185467"
+    end
+  end
 end

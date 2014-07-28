@@ -1,4 +1,4 @@
-div class="jumbotron"
+div class="row"
   div class="col-md-12"
     .row
       div class="col-md-5"
@@ -23,15 +23,9 @@ div class="jumbotron"
           = @yelp_snippet
           = image_tag(@yelp_image)
         br
+        h4 =link_to "Visit Website", @truck.website
+        br
         div class="row"
-          div class="col-md-4"
-            div class="day"
-              | &nbsp;
-          div class="col-md-4"
-            li class="op" Open
-          div class="col-md-4"
-            li class="cls" Close
-          br
           div class="col-md-4"
             div class="work_day"
               |Monday: &nbsp;
@@ -109,7 +103,7 @@ div class="jumbotron"
           br
           br
 
-      .col-md-7
+      .col-md-7.twitter-feed
         = render 'twitter_timeline'
 
 

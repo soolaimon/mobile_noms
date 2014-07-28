@@ -7,7 +7,7 @@
   div class="form-group"
     = f.label :name
     br
-    = f.text_field :name, placeholder: "Enter your business name", autofocus: true, class: "form-control"
+    = f.text_field :name, placeholder: "Enter your truck's name", autofocus: true, class: "form-control"
 
   div class="form-group"
     = f.label :food_type
@@ -18,6 +18,11 @@
     = f.label :description
     br
     = f.text_area :description, placeholder: "Description of your Noms truck", class: "form-control"
+
+  div class="form-group"
+    = f.label :website
+    br
+    = f.text_field :website, placeholder: 'URL to your site (e.g. "http://www.example.com")', class: "form-control" 
 
   div class="form-group"
     =f.label :twitter_handle
@@ -148,4 +153,4 @@
       = f.file_field :image
 
   div class="form-group"
-    = f.submit "Submit Truck", class: "btn btn-primary"
+    = f.submit "Submit Truck", class: "btn btn-primary submit"

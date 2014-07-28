@@ -23,7 +23,7 @@ class LocationsController < ApplicationController
   def current_location
     session[:latitude] = location_params[:latitude]
     session[:longitude] = location_params[:longitude]
-    render json: session
+    render json: session[:latitude]
   end
 
   private
