@@ -61,7 +61,12 @@ a {
   color: #df382c;
 }
 
-btn#fl.btn.btn-success, input.btn.btn-primary {
+btn#fl.btn.btn-success {
+  margin-top: 10px;
+}
+
+input.btn.btn-primary {
+  background-color: #df382c;
   margin-top: 10px;
 }
 
