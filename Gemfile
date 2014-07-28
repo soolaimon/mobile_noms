@@ -21,6 +21,8 @@ gem 'pg_search'
 gem 'mini_magick'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
+gem 'yelp'
+# gem 'yelpster'
 gem 'thin'
 gem 'uglifier', '>= 1.3.0'
 gem 'unf'
@@ -46,6 +48,8 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'pry-rails'
+  # gem 'better_errors'
+  # gem 'binding_of_caller'
 end
 
 group :production do

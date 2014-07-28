@@ -39,7 +39,7 @@ div.jumbotron div.col-md-12 {
 }
 
 .hour2 label {
-  color: #D44519;
+  color: #df382c;
   font-size: 20px;
 }
 
@@ -145,7 +145,11 @@ span.btn.btn-success:hover {
 input#truck_image {
   color: white;
   font-size: 20px;
-  margin-top: -3px;
+  margin-top: -8px;
+}
+
+div.row {
+  margin-top: 10px;
 }
 
 .glyphicon.glyphicon-picture {

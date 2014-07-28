@@ -2,14 +2,20 @@ class TrucksController < ApplicationController
   before_action :ensure_user_is_logged_in, only: [:index, :new, :create, :edit, :update, :destroy]
   before_action :get_truck, only: [:show, :edit, :update, :destroy]
   before_action :get_times, only: [:new, :edit, :update, :create]
+  before_action :yelp_truck, only: [:show]
+  before_action :display_yelp_truck, only: [:show]
 
   def index
     @trucks = current_user.trucks
     @title = 'Trucks'
+
   end
 
   def show
     @title = 'Truck'
+    @yelp_truck
+    @display_yelp_truck
+
   end
 
   def new
@@ -76,5 +82,20 @@ class TrucksController < ApplicationController
 
   def get_times
     @times = TrucksHelper::times
+  end
+
+  def yelp_truck
+    if @truck.location.address
+      @search = Yelp.client.search( @truck.location.address, { term: @truck.name, sort: 0 })
+      @yelp_truck = @search.businesses.select{ |a| a.name.capitalize == @truck.name.capitalize}.first
+    end
+  end
+
+  def display_yelp_truck
+    unless @yelp_truck.nil?
+      @yelp_image = @yelp_truck.rating_img_url
+      @yelp_snippet = @yelp_truck.snippet_text
+      @yelp_url = @yelp_truck.url
+    end
   end
 end
