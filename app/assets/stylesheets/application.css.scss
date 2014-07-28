@@ -24,13 +24,15 @@ body {
 }
 
 .navbar-header img {
-  margin: -12px;
+  margin-top: -13px;
 }
 
 div.navbar.navbar-default {
   position: fixed;
   z-index: 10;
   width: 100%;
+  background-color: #df382c;
+  border-color: #df382c;
 }
 
 div.container {
@@ -87,12 +89,16 @@ input.button {
 }
 
 .unhappy {
-  color: #16A2CC;
-  font-size: 17px;
+  color: #08BDBD;
+  font-size: 15px;
 }
 
 .btn.btn-danger.truck-delete a {
   color: white;
+}
+
+button.btn.btn-primary {
+  background-color: #df382c;
 }
 
 i {
@@ -109,4 +115,15 @@ img#main {
   margin-left: auto;
   padding-bottom: 10px;
   max-width: 100%;
+}
+
+ul.horizontal-menu a {
+  font-size: 20px;
+  color: #df382c;
+}
+
+p.alert.alert-info {
+  font-size: 15px;
+  background-color: #B0E8E8;
+  border-color: #6FF2F2;
 }

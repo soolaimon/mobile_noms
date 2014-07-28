@@ -13,15 +13,15 @@ div.jumbotron div.col-md-12 {
 
 .food-type {
   font-size: 20px;
-  color: #DB491D;
+  color: #df382c;
 }
 
 .food-description {
-  color: #128FB5;
+  color: #08BDBD;
 }
 
 .pay {
-  color: #128FB5;
+  color: #08BDBD;
 }
 
 .work_day {
@@ -32,12 +32,15 @@ div.jumbotron div.col-md-12 {
   color: #16AB5C;
 }
 
-.hour1 {
-  color: #16AB5C;
+
+.hour1 label {
+  color: #4DB866;
+  font-size: 20px;
 }
 
-.hour2 {
-  color: #DB491D;
+.hour2 label {
+  color: #df382c;
+  font-size: 20px;
 }
 
 #truck-map {
@@ -54,7 +57,16 @@ a.btn.btn-success {
   margin-top: 4px;
 }
 
-btn#fl.btn.btn-success, input.btn.btn-primary {
+a {
+  color: #df382c;
+}
+
+btn#fl.btn.btn-success {
+  margin-top: 10px;
+}
+
+input.btn.btn-primary {
+  background-color: #df382c;
   margin-top: 10px;
 }
 
@@ -64,10 +76,14 @@ iframe#twitter-widget-0.twitter-timeline.twitter-timeline-rendered {
   box-shadow: 0px 0px 20px;
 }
 
-.name-index, .id-index {
+.name-index a, .id-index {
   font-size: 20px;
   font-weight: bold;
   color: #DB491D;
+}
+
+.name-index a {
+  color: #df382c;
 }
 
 .name-index {
@@ -82,6 +98,10 @@ iframe#twitter-widget-0.twitter-timeline.twitter-timeline-rendered {
 
 div.col-md-3 {
   padding: 10px;
+}
+
+div.col-md-6 h1 {
+  color: #df382c;
 }
 
 div.col-md-7 {
@@ -99,7 +119,7 @@ i.glyphicon.glyphicon-pushpin {
 .jumbotron h1 {
   font-size: 50px;
   margin: 0;
-  color: #D6491E;
+  color: #df382c;
 }
 
 .payment-type img {
@@ -109,6 +129,33 @@ i.glyphicon.glyphicon-pushpin {
 
 @media (max-width: 742px) {
   .duplicate-truck, .submit {
-    width: 100%;
+    width: 73%;
+    margin-top: 10px;
   }
+}
+
+span.btn.btn-success {
+  transition: all 0.1s linear;
+}
+
+span.btn.btn-success:hover {
+  opacity: 0.7;
+}
+
+input#truck_image {
+  color: white;
+  font-size: 20px;
+  margin-top: -8px;
+}
+
+div.row {
+  margin-top: 10px;
+}
+
+.glyphicon.glyphicon-picture {
+  color: white;
+}
+
+li {
+  color: white;
 }
