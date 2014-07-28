@@ -17,11 +17,11 @@ div.jumbotron div.col-md-12 {
 }
 
 .food-description {
-  color: #128FB5;
+  color: #08BDBD;
 }
 
 .pay {
-  color: #128FB5;
+  color: #08BDBD;
 }
 
 .work_day {
@@ -114,10 +114,24 @@ i.glyphicon.glyphicon-pushpin {
   }
 }
 
+<<<<<<< HEAD
 span.btn.btn-success {
   transition: all 0.1s linear;
 }
 
 span.btn.btn-success:hover {
   opacity: 0.5;
+=======
+input#truck_image {
+  color: white;
+  font-size: 14px;
+}
+
+.glyphicon.glyphicon-picture {
+  color: white;
+}
+
+li {
+  color: white;
+>>>>>>> 383ee75924a818f9cc16c4d47a24946d0c001c42
 }

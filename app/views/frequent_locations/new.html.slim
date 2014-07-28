@@ -1,22 +1,6 @@
-/ = form_for [@frequent_location.truck, @frequent_location] do |f|
-/   .form-group
-/     = f.label :"Frequent Location", style: "font-size: 18px;"
-/     = f.text_field :address, placeholder: "Street Address", class: "form-control"
-/   .form-group
-/     = f.submit "Save Location", class: "btn btn-primary"
-
 = form_for [@frequent_location.truck, @frequent_location] do |f|
   .form-group
     = f.label :"Frequent Location", style: "font-size: 18px;"
-    .navbar-form
     = f.text_field :address, placeholder: "Street Address", class: "form-control"
-  .form-group.input-group-btn
+  .form-group
     = f.submit "Save Location", class: "btn btn-primary"
-
-
-form.navbar-form role="search"
-  .input-group.add-on
-    input#srch-term.form-control name="srch-term" placeholder="Search" type="text"
-      .input-group-btn
-        button.btn.btn-default type="submit"
-          i.glyphicon.glyphicon-search
