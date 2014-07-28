@@ -92,12 +92,10 @@ class TrucksController < ApplicationController
   end
 
   def display_yelp_truck
-    if @yelp_truck.nil?
-    else
+    unless @yelp_truck.nil?
       @yelp_image = @yelp_truck.rating_img_url
       @yelp_snippet = @yelp_truck.snippet_text
       @yelp_url = @yelp_truck.url
     end
   end
-
 end
