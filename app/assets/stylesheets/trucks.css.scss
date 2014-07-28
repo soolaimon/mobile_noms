@@ -109,8 +109,17 @@ i.glyphicon.glyphicon-pushpin {
 
 @media (max-width: 742px) {
   .duplicate-truck, .submit {
-    width: 100%;
+    width: 73%;
+    margin-top: 10px;
   }
+}
+
+span.btn.btn-success {
+  transition: all 0.1s linear;
+}
+
+span.btn.btn-success:hover {
+  opacity: 0.7;
 }
 
 input#truck_image {
