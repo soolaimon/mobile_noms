@@ -13,7 +13,7 @@ div.jumbotron div.col-md-12 {
 
 .food-type {
   font-size: 20px;
-  color: #DB491D;
+  color: #df382c;
 }
 
 .food-description {
@@ -35,12 +35,12 @@ div.jumbotron div.col-md-12 {
 
 .hour1 label {
   color: #4DB866;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .hour2 label {
   color: #D44519;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 #truck-map {
@@ -57,7 +57,16 @@ a.btn.btn-success {
   margin-top: 4px;
 }
 
-btn#fl.btn.btn-success, input.btn.btn-primary {
+a {
+  color: #df382c;
+}
+
+btn#fl.btn.btn-success {
+  margin-top: 10px;
+}
+
+input.btn.btn-primary {
+  background-color: #df382c;
   margin-top: 10px;
 }
 
@@ -110,7 +119,7 @@ i.glyphicon.glyphicon-pushpin {
 .jumbotron h1 {
   font-size: 50px;
   margin: 0;
-  color: #D6491E;
+  color: #df382c;
 }
 
 .payment-type img {
@@ -135,7 +144,7 @@ span.btn.btn-success:hover {
 
 input#truck_image {
   color: white;
-  font-size: 14px;
+  font-size: 20px;
   margin-top: -3px;
 }
 
