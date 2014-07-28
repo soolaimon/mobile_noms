@@ -113,3 +113,11 @@ i.glyphicon.glyphicon-pushpin {
     margin-top: 10px;
   }
 }
+
+span.btn.btn-success {
+  transition: all 0.1s linear;
+}
+
+span.btn.btn-success:hover {
+  opacity: 0.5;
+}
