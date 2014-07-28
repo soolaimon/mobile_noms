@@ -1,13 +1,13 @@
 h1 Search Results
 
-.s_results
+.s_results.row
   - if @results
     - @results.each do |result|
-      .col-md-1
+      .col-md-2
         = image_tag(result.image.url(:logosm))
       .col-md-4
         p.results = link_to(result.name, truck_path(result.id))
-      .col-md-7
+      .col-md-6
         p = result.description
       br
   - else
