@@ -24,13 +24,15 @@ body {
 }
 
 .navbar-header img {
-  margin: -12px;
+  margin-top: -13px;
 }
 
 div.navbar.navbar-default {
   position: fixed;
   z-index: 10;
   width: 100%;
+  background-color: #df382c;
+  border-color: #df382c;
 }
 
 div.container {
@@ -95,6 +97,10 @@ input.button {
   color: white;
 }
 
+button.btn.btn-primary {
+  background-color: #df382c;
+}
+
 i {
   color: #333333;
 }
@@ -110,10 +116,10 @@ img#main {
   padding-bottom: 10px;
   max-width: 100%;
 }
-p
+
 ul.horizontal-menu a {
-  font-size: 15px;
-  color: white;
+  font-size: 20px;
+  color: #df382c;
 }
 
 p.alert.alert-info {
