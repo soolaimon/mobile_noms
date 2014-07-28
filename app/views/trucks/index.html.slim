@@ -7,35 +7,35 @@ div class="row"
 
 br
 
-div class="row"
-  - @trucks.each do |truck|
-    div class="row"
-      div class="col-md-2"
-        = image_tag(truck.image.url(:logosm))
-      div class="col-md-3"
-        .name-index
-          = link_to( truck.name, truck_path(truck.id))
-      div class="col-md-6"
-        = link_to edit_truck_path(truck.id)
-          .btn.btn-default
-            .glyphicon.glyphicon-pencil
-        | &nbsp;&nbsp;
+- @trucks.each do |truck|
+  div class="row"
+      div class="row"
+        div class="col-md-2"
+          = image_tag(truck.image.url(:logosm))
+        div class="col-md-3"
+          .name-index
+            = link_to( truck.name, truck_path(truck.id))
+        div class="col-md-6"
+          = link_to edit_truck_path(truck.id)
+            .btn.btn-default
+              .glyphicon.glyphicon-pencil
+          | &nbsp;&nbsp;
 
-        = link_to truck_path(truck.id), method: :delete, data: { confirm: "Are you sure to delete this truck?"}
-          .btn.btn-danger.truck-delete
-            .glyphicon.glyphicon-trash
+          = link_to truck_path(truck.id), method: :delete, data: { confirm: "Are you sure to delete this truck?"}
+            .btn.btn-danger.truck-delete
+              .glyphicon.glyphicon-trash
 
-        | &nbsp;&nbsp;
-        / Geocodes location
-        a.geolocate-truck href="#" data-truck="#{truck.id}" data-location="#{truck.location.id}"
-          span.btn.btn-success
-            i.glyphicon.glyphicon-pushpin
+          | &nbsp;&nbsp;
+          / Geocodes location
+          a.geolocate-truck href="#" data-truck="#{truck.id}" data-location="#{truck.location.id}"
+            span.btn.btn-success
+              i.glyphicon.glyphicon-pushpin
 
 
-        | &nbsp;&nbsp;
-        / need a link to edit_truck_location path for manual update
-        span.btn.btn-default
-          = link_to("Edit Location", edit_truck_location_path(truck.id, truck.location))
+          | &nbsp;&nbsp;
+          / need a link to edit_truck_location path for manual update
+          span.btn.btn-default
+            = link_to("Edit Location", edit_truck_location_path(truck.id, truck.location))
 
         br
         br
