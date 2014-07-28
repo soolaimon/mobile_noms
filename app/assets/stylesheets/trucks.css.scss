@@ -13,7 +13,7 @@ div.jumbotron div.col-md-12 {
 
 .food-type {
   font-size: 20px;
-  color: #df382c;
+  color: white;
 }
 
 .food-description {
@@ -83,7 +83,11 @@ iframe#twitter-widget-0.twitter-timeline.twitter-timeline-rendered {
 }
 
 .name-index a {
-  color: #df382c;
+  color: white;
+}
+
+.name-index a:hover {
+  color: gray;
 }
 
 .name-index {
@@ -98,10 +102,6 @@ iframe#twitter-widget-0.twitter-timeline.twitter-timeline-rendered {
 
 div.col-md-3 {
   padding: 10px;
-}
-
-div.col-md-6 h1 {
-  color: #df382c;
 }
 
 div.col-md-7 {
@@ -119,7 +119,7 @@ i.glyphicon.glyphicon-pushpin {
 .jumbotron h1 {
   font-size: 50px;
   margin: 0;
-  color: #df382c;
+  color: white;
 }
 
 .payment-type img {
