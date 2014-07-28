@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140722225149) do
+ActiveRecord::Schema.define(version: 20140728164723) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,14 +45,14 @@ ActiveRecord::Schema.define(version: 20140722225149) do
   end
 
   create_table "trucks", force: true do |t|
-    t.string   "name",                             null: false
+    t.string   "name",                                    null: false
     t.string   "food_type"
     t.text     "description"
     t.datetime "starts_at"
     t.datetime "ends_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id",                          null: false
+    t.integer  "user_id",                                 null: false
     t.string   "image"
     t.string   "monday_open"
     t.string   "tuesday_open"
@@ -73,7 +73,8 @@ ActiveRecord::Schema.define(version: 20140722225149) do
     t.boolean  "discover",         default: false
     t.boolean  "american_express", default: false
     t.boolean  "cash",             default: false
-    t.string   "twitter_handle",                   null: false
+    t.string   "twitter_handle",   default: "mobilenoms", null: false
+    t.string   "website"
   end
 
   create_table "users", force: true do |t|
