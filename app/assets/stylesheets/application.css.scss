@@ -24,7 +24,7 @@ body {
 }
 
 .navbar-header img {
-  margin: -12px;
+  margin-top: -13px;
 }
 
 div.navbar.navbar-default {
@@ -109,4 +109,15 @@ img#main {
   margin-left: auto;
   padding-bottom: 10px;
   max-width: 100%;
+}
+p
+ul.horizontal-menu a {
+  font-size: 15px;
+  color: white;
+}
+
+p.alert.alert-info {
+  font-size: 15px;
+  background-color: #B0E8E8;
+  border-color: #6FF2F2;
 }
