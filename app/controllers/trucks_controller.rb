@@ -13,7 +13,6 @@ class TrucksController < ApplicationController
 
   def show
     @title = 'Truck'
-    @yelp_truck
     @display_yelp_truck
 
   end
