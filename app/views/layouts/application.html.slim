@@ -18,26 +18,26 @@ html lang="en"
 
     script src="http://maps.google.com/maps/api/js?sensor=true"
 
-body
+  body
 
-  =render "layouts/nav"
+    =render "layouts/nav"
 
-  div id='alerts'
-    div id='alerts-inner'
-      - if notice
-        p.alert.alert-info role='alert'
-          = notice
-      - if alert
-        p.alert.alert-danger role='alert'
-          =alert
+    div id='alerts'
+      div id='alerts-inner'
+        - if notice
+          p.alert.alert-info role='alert'
+            = notice
+        - if alert
+          p.alert.alert-danger role='alert'
+            =alert
 
-  .container.main-wrapper
-    div class="jumbotron"
-      == yield
+    .container.main-wrapper
+      div class="jumbotron"
+        == yield
 
-  = javascript_include_tag "application"
-  = javascript_include_tag "vendor/modernizr"
-  = javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"
+    = javascript_include_tag "application"
+    = javascript_include_tag "vendor/modernizr"
+    = javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"
 
-  / =render "layouts/ad"
-  =render "layouts/footer"
+    / =render "layouts/ad"
+    =render "layouts/footer"
