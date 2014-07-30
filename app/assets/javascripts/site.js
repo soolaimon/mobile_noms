@@ -119,7 +119,7 @@ var fullMap = function () {
           title: truck.name,
           infoWindow: infoWindow
         });
-        new google.maps.event.trigger(truckMarker, 'click');
+        // new google.maps.event.trigger(truckMarker, 'click');
       });
 
     });
