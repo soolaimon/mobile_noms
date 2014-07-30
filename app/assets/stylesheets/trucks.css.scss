@@ -13,11 +13,16 @@ div.jumbotron div.col-md-12 {
 
 .food-type {
   font-size: 20px;
-  color: white;
+  color: #08BDBD;
+  a {
+    font-size: 22px;
+    color: #08BDBD;
+    text-decoration: underline;
+  }
 }
 
 .food-description {
-  color: #08BDBD;
+  color: white;
 }
 
 .pay {
@@ -53,6 +58,13 @@ div#truck-map {
   border-radius: 4px;
 }
 
+h4 {
+  a {
+    color: #08BDBD;
+    font-size: 22px;
+    text-decoration: underline;
+  }
+}
 a.btn.btn-success {
   margin-top: 4px;
 }
