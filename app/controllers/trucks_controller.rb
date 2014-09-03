@@ -13,6 +13,10 @@ class TrucksController < ApplicationController
     @trucks = current_user.trucks
   end
 
+  def blah_trucks
+    @trucks = current_user.truck
+  end
+
   def show
   end
 
